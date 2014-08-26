@@ -1,0 +1,47 @@
+# Maintainer: Duncan Townsend <duncant@mit.edu>
+# Contributor: Sven-Hendrik Haase <sh@lutzhaase.com>
+# Contributor: William Giokas <1007380@gmail.com>
+
+pkgname=pypy-sandbox
+pkgver=2.3.1
+pkgrel=4
+pkgdesc="A Python implementation written in Python, sandboxed version"
+url="http://pypy.org"
+arch=('armv6h')
+depends=('expat' 'bzip2' 'gdbm' 'openssl' 'libffi' 'zlib' 'pypy')
+makedepends=('tk' 'sqlite' 'mercurial' 'pypy')
+optdepends=('sqlite: sqlite module'
+            'tk: tk module')
+options=(!buildflags)
+license=('custom:MIT')
+source=("hg+http://bitbucket.org/pypy/pypy#revision=3cf384e")
+md5sums=('SKIP')
+
+build() {
+  cd pypy/pypy/goal
+
+  pypy ../../rpython/bin/rpython -O2 --sandbox --gcrootfinder=shadowstack targetpypystandalone
+}
+
+package() {
+  cd pypy
+
+  install -Dm755 pypy/goal/pypy-c "${pkgdir}"/opt/pypy/bin/pypy-c-sandbox
+
+  mkdir -p "${pkgdir}"/opt/pypy/lib_pypy/rpython/translator/sandbox
+  install -m644 rpython/__init__.py "${pkgdir}"/opt/pypy/lib_pypy/rpython/
+  install -m644 rpython/translator/__init__.py "${pkgdir}"/opt/pypy/lib_pypy/rpython/translator/
+  install -m644 rpython/translator/sandbox/{__init__,sandlib,vfs,_marshal}.py \
+                "${pkgdir}"/opt/pypy/lib_pypy/rpython/translator/sandbox/
+  sed -i -e '/import py/d' "${pkgdir}"/opt/pypy/lib_pypy/rpython/translator/sandbox/sandlib.py
+  mkdir -p "${pkgdir}"/opt/pypy/lib_pypy/rpython/tool
+  install -m644 rpython/tool/{__init__,killsubprocess}.py \
+                "${pkgdir}"/opt/pypy/lib_pypy/rpython/tool/
+
+  mkdir -p "${pkgdir}"/usr/bin
+  ln -s /opt/pypy/bin/pypy-c-sandbox "${pkgdir}"/usr/bin/pypy-c-sandbox
+  ln -s pypy-c-sandbox "${pkgdir}"/usr/bin/pypy-sandbox
+
+  install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/pypy-sandbox/LICENSE
+}
+# vim: ts=2 sw=2 et:

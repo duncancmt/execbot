@@ -1,0 +1,958 @@
+[translation:info] 2.7.6 (3cf384e86ef7, Aug 21 2014, 21:08:29)
+[translation:info] [PyPy 2.4.0-alpha0 with GCC 4.8.2 20131219 (prerelease)]
+[platform:msg] Set platform with 'host' cc=None, using cc='gcc'
+[translation:info] Translating target as defined by targetpypystandalone
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/gcctest.c -o /tmp/usession-default-2/gcctest.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/gcctest.c -o /tmp/usession-default-2/gcctest.o
+[platform:execute] gcc /tmp/usession-default-2/gcctest.o -pthread -lrt -o /tmp/usession-default-2/gcctest
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused -I/pypy-sandbox/src/pypy/rpython/translator/c /tmp/usession-default-2/platcheck_0.c -o /tmp/usession-default-2/platcheck_0.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused -I/pypy-sandbox/src/pypy/rpython/translator/c /pypy-sandbox/src/pypy/rpython/translator/c/src/thread.c -o /tmp/usession-default-2/rpython/translator/c/src/thread.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_0.o /tmp/usession-default-2/rpython/translator/c/src/thread.o -pthread -Wl,--export-dynamic,--version-script=/tmp/usession-default-2/dynamic-symbols-0 -lrt -o /tmp/usession-default-2/platcheck_0
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_1.c -o /tmp/usession-default-2/platcheck_1.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_1.o -pthread -lrt -o /tmp/usession-default-2/platcheck_1
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_2.c -o /tmp/usession-default-2/platcheck_2.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_2.o -pthread -lrt -o /tmp/usession-default-2/platcheck_2
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_3.c -o /tmp/usession-default-2/platcheck_3.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_3.o -pthread -lrt -o /tmp/usession-default-2/platcheck_3
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_4.c -o /tmp/usession-default-2/platcheck_4.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_4.o -pthread -lintl -lrt -o /tmp/usession-default-2/platcheck_4
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_5.c -o /tmp/usession-default-2/platcheck_5.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_5.o -pthread -lrt -o /tmp/usession-default-2/platcheck_5
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_6.c -o /tmp/usession-default-2/platcheck_6.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_6.o -pthread -lrt -o /tmp/usession-default-2/platcheck_6
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_7.c -o /tmp/usession-default-2/platcheck_7.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_7.o -pthread -lrt -o /tmp/usession-default-2/platcheck_7
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_8.c -o /tmp/usession-default-2/platcheck_8.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_8.o -pthread -lrt -o /tmp/usession-default-2/platcheck_8
+[translation] PyPy config object:
+[translation] [objspace]
+[translation]     lonepycfiles = False
+[translation]     [std]
+[translation]         getattributeshortcut = True
+[translation]         intshortcut = True
+[translation]         optimized_list_getitem = True
+[translation]         withidentitydict = True
+[translation]         withmethodcache = True
+[translation]         withprebuiltchar = True
+[translation]         withrangelist = True
+[translation]         withspecialisedtuple = True
+[translation]         withtypeversion = True
+[translation]     [usemodules]
+[translation]         __pypy__ = True
+[translation]         _ast = True
+[translation]         _codecs = True
+[translation]         _io = True
+[translation]         _pickle_support = True
+[translation]         _random = True
+[translation]         _sre = True
+[translation]         _testing = True
+[translation]         _weakref = True
+[translation]         cmath = True
+[translation]         errno = True
+[translation]         gc = True
+[translation]         imp = True
+[translation]         marshal = True
+[translation]         math = True
+[translation]         operator = True
+[translation]         parser = True
+[translation]         symbol = True
+[translation]         token = True
+[translation]     usepycfiles = False
+Wrote /pypy-sandbox/src/pypy/lib_pypy/ctypes_config_cache/_resource_32_.py.
+Wrote /pypy-sandbox/src/pypy/lib_pypy/ctypes_config_cache/_locale_32_.py.
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_9.c -o /tmp/usession-default-2/platcheck_9.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_9.o -pthread -lrt -o /tmp/usession-default-2/platcheck_9
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_10.c -o /tmp/usession-default-2/platcheck_10.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_11.c -o /tmp/usession-default-2/platcheck_11.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_12.c -o /tmp/usession-default-2/platcheck_12.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_12.o -pthread -lrt -o /tmp/usession-default-2/platcheck_12
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_13.c -o /tmp/usession-default-2/platcheck_13.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_13.o -pthread -lrt -o /tmp/usession-default-2/platcheck_13
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_14.c -o /tmp/usession-default-2/platcheck_14.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_14.o -pthread -lrt -o /tmp/usession-default-2/platcheck_14
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_15.c -o /tmp/usession-default-2/platcheck_15.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_15.o -pthread -lrt -o /tmp/usession-default-2/platcheck_15
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_16.c -o /tmp/usession-default-2/platcheck_16.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_16.o -pthread -lrt -o /tmp/usession-default-2/platcheck_16
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_17.c -o /tmp/usession-default-2/platcheck_17.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_18.c -o /tmp/usession-default-2/platcheck_18.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_18.o -pthread -lrt -o /tmp/usession-default-2/platcheck_18
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_19.c -o /tmp/usession-default-2/platcheck_19.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_19.o -pthread -lrt -o /tmp/usession-default-2/platcheck_19
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_20.c -o /tmp/usession-default-2/platcheck_20.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_20.o -pthread -lrt -o /tmp/usession-default-2/platcheck_20
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_21.c -o /tmp/usession-default-2/platcheck_21.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_21.o -pthread -lrt -o /tmp/usession-default-2/platcheck_21
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_22.c -o /tmp/usession-default-2/platcheck_22.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_22.o -pthread -lrt -lrt -o /tmp/usession-default-2/platcheck_22
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_23.c -o /tmp/usession-default-2/platcheck_23.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_23.o -pthread -lrt -lrt -o /tmp/usession-default-2/platcheck_23
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_24.c -o /tmp/usession-default-2/platcheck_24.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_24.o -pthread -lrt -lrt -o /tmp/usession-default-2/platcheck_24
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_26.c -o /tmp/usession-default-2/platcheck_26.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_26.o -pthread -lrt -o /tmp/usession-default-2/platcheck_26
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_27.c -o /tmp/usession-default-2/platcheck_27.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_27.o -pthread -lrt -o /tmp/usession-default-2/platcheck_27
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_28.c -o /tmp/usession-default-2/platcheck_28.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_28.o -pthread -lrt -o /tmp/usession-default-2/platcheck_28
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_29.c -o /tmp/usession-default-2/platcheck_29.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_29.o -pthread -ldl -lrt -o /tmp/usession-default-2/platcheck_29
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_30.c -o /tmp/usession-default-2/platcheck_30.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_30.o -pthread -lrt -o /tmp/usession-default-2/platcheck_30
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused -I/usr/lib/libffi-3.1/include /tmp/usession-default-2/platcheck_31.c -o /tmp/usession-default-2/platcheck_31.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_31.o -pthread -lffi -lrt -o /tmp/usession-default-2/platcheck_31
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_32.c -o /tmp/usession-default-2/platcheck_32.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_32.o -pthread -lrt -o /tmp/usession-default-2/platcheck_32
+[translation] translate.py configuration:
+[translation] [translate]
+[translation]     opt = 2
+[translation]     targetspec = targetpypystandalone
+[translation] translation configuration:
+[translation] [translation]
+[translation]     check_str_without_nul = True
+[translation]     gc = generation
+[translation]     gcrootfinder = shadowstack
+[translation]     gctransformer = framework
+[translation]     list_comprehension_operations = True
+[translation]     rweakref = True
+[translation]     sandbox = True
+[translation]     thread = False
+[translation]     withsmallfuncsets = 5
+[translation:info] Annotating&simplifying...
+[2621] {translation-task
+starting annotate
+[translation:info] with policy: pypy.tool.ann_override.PyPyAnnotatorPolicy
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_33.c -o /tmp/usession-default-2/platcheck_33.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_33.o -pthread -lrt -o /tmp/usession-default-2/platcheck_33
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_34.c -o /tmp/usession-default-2/platcheck_34.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_34.o -pthread -lrt -o /tmp/usession-default-2/platcheck_34
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_35.c -o /tmp/usession-default-2/platcheck_35.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_35.o -pthread -lrt -o /tmp/usession-default-2/platcheck_35
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_36.c -o /tmp/usession-default-2/platcheck_36.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_36.o -pthread -lrt -o /tmp/usession-default-2/platcheck_36
+[37754] translation-task}
+[translation:info] RTyping...
+[37755] {translation-task
+starting rtype_lltype
+[rtyper:WARNING] SomeString(can_be_None=True) can be null, but forcing non-null in dict key
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict value
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict key
+[rtyper:WARNING] SomePBC(can_be_None=True, const=None, subset_of=None) can be null, but forcing non-null in dict value
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict key
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict value
+[rtyper:WARNING] SomeUnicodeString() can be null, but forcing non-null in dict key
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict value
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict key
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict value
+[rtyper] specializing: 4000 / 79091 blocks   (5%)
+[rtyper] specializing: 8100 / 80267 blocks   (10%)
+[rtyper] specializing: 12300 / 81674 blocks   (15%)
+[rtyper] specializing: 16600 / 82820 blocks   (20%)
+[rtyper] specializing: 20900 / 83273 blocks   (25%)
+[rtyper] specializing: 25100 / 83643 blocks   (30%)
+[rtyper] specializing: 29500 / 84089 blocks   (35%)
+[rtyper] specializing: 33900 / 84535 blocks   (40%)
+[rtyper] specializing: 38500 / 85382 blocks   (45%)
+[rtyper] specializing: 42900 / 85691 blocks   (50%)
+[rtyper] specializing: 47400 / 86027 blocks   (55%)
+[rtyper] specializing: 51800 / 86309 blocks   (60%)
+[rtyper] specializing: 56300 / 86598 blocks   (65%)
+[rtyper] specializing: 60800 / 86845 blocks   (70%)
+[rtyper] specializing: 65400 / 87143 blocks   (75%)
+[rtyper] specializing: 69900 / 87342 blocks   (80%)
+[rtyper] specializing: 74400 / 87521 blocks   (85%)
+[rtyper] specializing: 76200 / 87543 blocks   (87%)
+[rtyper] specializing: 80600 / 87543 blocks   (92%)
+[rtyper] specializing: 85000 / 87543 blocks   (97%)
+[rtyper] -=- specialized 87553 blocks -=-
+[rtyper] specializing: 87600 / 89855 blocks   (97%)
+[rtyper] specializing: 89900 / 90169 blocks   (99%)
+[rtyper] -=- specialized 2616 more blocks -=-
+[rtyper] -=- specialized 0 more blocks -=-
+[rtyper] -=- specialized 5 more blocks -=-
+[75f3a] translation-task}
+[translation:info] lltype back-end optimisations...
+[75f3b] {translation-task
+starting backendopt_lltype
+[backendopt:inlining] phase with threshold factor: 32.4
+[backendopt:inlining] heuristic: rpython.translator.backendopt.inline.inlining_heuristic
+[backendopt:inlining] inlined 54138 callsites.
+[backendopt:malloc] starting malloc removal
+[backendopt:malloc] removed 4767 simple mallocs in total
+[backendopt:mergeifblocks] starting to merge if blocks
+[backendopt:mergeifblocks:WARNING] unreachable code with value u'\\' in graph (rpython.rlib.runicode:1310)unicode_escape
+[93c44] translation-task}
+[translation:info] inserting stack checks...
+[93c45] {translation-task
+starting stackcheckinsertion_lltype
+[rtyper] -=- specialized 7 more blocks -=-
+[translation:info] inserted 1757 stack checks.
+[9f91b] translation-task}
+[translation:info] Creating database for generating c source...
+[9f91c] {translation-task
+starting database_c
+[rtyper] specializing: 90200 / 90202 blocks   (99%)
+[rtyper] -=- specialized 21 more blocks -=-
+[rtyper] specializing: 90300 / 91641 blocks   (98%)
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_ll_typeid_map'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gctypelayout.GCData object at 0x3127c370> has no attribute 'root_stack_top'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gctypelayout.GCData object at 0x3127c370> has no attribute 'root_stack_base'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'top_of_space'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'red_zone'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'total_collection_count'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_debug_pending'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'space_size'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'max_space_size'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'objects_with_weakrefs'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_list_rpy'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'nursery_scale'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'objects_with_light_finalizers'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'last_generation_root_objects'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_d_oopty'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_callback2_arg4'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_callback2_arg5'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'largest_young_fixedsize'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_debug_seen'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_callback2_arg2'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_callback2_arg3'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'nursery_size'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'objects_with_id'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'tmpstack'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'fromspace'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'free'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'tospace'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'young_objects_with_weakrefs'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'objects_with_finalizers'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_count_rpy'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'largest_young_var_basesize'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'old_objects_pointing_to_young'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_callback2_arg0'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_d_lgro'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_callback2_arg1'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'id_free_list'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'next_free_id'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'finalizer_lock_count'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'young_objects_with_id'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute '_tracked_dict'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x3127dfd0> has no attribute 'run_finalizers'
+[rtyper] -=- specialized 1486 more blocks -=-
+[rtyper] specializing: 91700 / 91832 blocks   (99%)
+[rtyper] -=- specialized 144 more blocks -=-
+[backendopt:inlining] phase with threshold factor: 32.4
+[backendopt:inlining] heuristic: rpython.translator.backendopt.inline.inlining_heuristic
+[backendopt:inlining] inlined 832 callsites.
+[backendopt:malloc] starting malloc removal
+[backendopt:malloc] removed 26 simple mallocs in total
+[backendopt:mergeifblocks] starting to merge if blocks
+[rtyper] -=- specialized 10 more blocks -=-
+[rtyper] specializing: 91900 / 91959 blocks   (99%)
+[rtyper] -=- specialized 117 more blocks -=-
+[rtyper] -=- specialized 23 more blocks -=-
+[sandbox:WARNING] Not Implemented: sandboxing for external function 'RPython_StartupCode'
+[rtyper] -=- specialized 7 more blocks -=-
+[sandbox:WARNING] Not Implemented: sandboxing for external function 'pypy_debug_catch_fatal_exception'
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] specializing: 92000 / 92024 blocks   (99%)
+[rtyper] -=- specialized 34 more blocks -=-
+[c]     1000 nodes  [ array: 220  framework rtti: 35  func: 372  group: 1  struct: 1138 ]
+[rtyper] -=- specialized 28 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[c]     2000 nodes  [ array: 429  framework rtti: 50  func: 526  group: 1  struct: 2783 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[c]     3000 nodes  [ array: 580  framework rtti: 56  func: 609  group: 1  struct: 4128 ]
+[c]     4000 nodes  [ array: 834  framework rtti: 64  func: 700  group: 1  struct: 9340 ]
+[c]     5000 nodes  [ array: 1116  framework rtti: 65  func: 763  group: 1  struct: 10337 ]
+[c]     6000 nodes  [ array: 1240  framework rtti: 72  func: 902  group: 1  struct: 12077 ]
+[c]     7000 nodes  [ array: 1240  framework rtti: 72  func: 902  group: 1  struct: 13852 ]
+[c]     8000 nodes  [ array: 1240  framework rtti: 72  func: 902  group: 1  struct: 15803 ]
+[c]     9000 nodes  [ array: 1240  framework rtti: 72  func: 902  group: 1  struct: 17555 ]
+[c]    10000 nodes  [ array: 1324  framework rtti: 89  func: 1072  group: 1  struct: 19154 ]
+[c]    11000 nodes  [ array: 1602  framework rtti: 96  func: 1211  group: 1  struct: 20194 ]
+[c]    12000 nodes  [ array: 1657  framework rtti: 104  func: 1314  group: 1  struct: 20915 ]
+[c]    13000 nodes  [ array: 1746  framework rtti: 113  func: 1501  group: 1  struct: 21955 ]
+[c]    14000 nodes  [ array: 1898  framework rtti: 137  func: 1501  group: 1  struct: 22051 ]
+[c]    15000 nodes  [ array: 2082  framework rtti: 137  func: 1501  group: 1  struct: 22051 ]
+[c]    16000 nodes  [ array: 2256  framework rtti: 137  func: 1501  group: 1  struct: 22051 ]
+[c]    17000 nodes  [ array: 2439  framework rtti: 137  func: 1501  group: 1  struct: 22051 ]
+[c]    18000 nodes  [ array: 2615  framework rtti: 137  func: 1501  group: 1  struct: 22051 ]
+[c]    19000 nodes  [ array: 2792  framework rtti: 137  func: 1501  group: 1  struct: 22051 ]
+[c]    20000 nodes  [ array: 2968  framework rtti: 137  func: 1501  group: 1  struct: 22051 ]
+[c]    21000 nodes  [ array: 3172  framework rtti: 154  func: 1596  group: 1  struct: 22096 ]
+[c]    22000 nodes  [ array: 3459  framework rtti: 170  func: 1769  group: 1  struct: 22856 ]
+[c]    23000 nodes  [ array: 3707  framework rtti: 171  func: 1868  group: 1  struct: 23949 ]
+[c]    24000 nodes  [ array: 4200  framework rtti: 188  func: 2038  group: 1  struct: 25637 ]
+[c]    25000 nodes  [ array: 4476  framework rtti: 192  func: 2154  group: 1  struct: 26896 ]
+[c]    26000 nodes  [ array: 4547  framework rtti: 192  func: 2158  group: 1  struct: 27179 ]
+[c]    27000 nodes  [ array: 4561  framework rtti: 196  func: 2198  group: 1  struct: 27818 ]
+[c]    28000 nodes  [ array: 4706  framework rtti: 204  func: 2304  group: 1  struct: 28605 ]
+[c]    29000 nodes  [ array: 4759  framework rtti: 207  func: 2321  group: 1  struct: 29119 ]
+[c]    30000 nodes  [ array: 4872  framework rtti: 210  func: 2390  group: 1  struct: 29362 ]
+[c]    31000 nodes  [ array: 5043  framework rtti: 212  func: 2433  group: 1  struct: 29993 ]
+[c]    32000 nodes  [ array: 5177  framework rtti: 214  func: 2488  group: 1  struct: 31005 ]
+[c]    33000 nodes  [ array: 5193  framework rtti: 216  func: 2568  group: 1  struct: 31808 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    34000 nodes  [ array: 5264  framework rtti: 226  func: 2685  group: 1  struct: 32774 ]
+[c]    35000 nodes  [ array: 5501  framework rtti: 256  func: 2817  group: 1  struct: 36131 ]
+[c]    36000 nodes  [ array: 5934  framework rtti: 265  func: 2903  group: 1  struct: 37732 ]
+[c]    37000 nodes  [ array: 6114  framework rtti: 284  func: 3021  group: 1  struct: 38463 ]
+[c]    38000 nodes  [ array: 6404  framework rtti: 284  func: 3026  group: 1  struct: 40999 ]
+[c]    39000 nodes  [ array: 6611  framework rtti: 298  func: 3137  group: 1  struct: 41549 ]
+[c]    40000 nodes  [ array: 6860  framework rtti: 316  func: 3283  group: 1  struct: 41998 ]
+[c]    41000 nodes  [ array: 7138  framework rtti: 323  func: 3399  group: 1  struct: 42622 ]
+[c]    42000 nodes  [ array: 7138  framework rtti: 323  func: 3399  group: 1  struct: 43922 ]
+[c]    43000 nodes  [ array: 7138  framework rtti: 323  func: 3399  group: 1  struct: 45338 ]
+[c]    44000 nodes  [ array: 7269  framework rtti: 327  func: 3451  group: 1  struct: 47745 ]
+[c]    45000 nodes  [ array: 7310  framework rtti: 333  func: 3497  group: 1  struct: 47997 ]
+[c]    46000 nodes  [ array: 7310  framework rtti: 333  func: 3497  group: 1  struct: 48102 ]
+[c]    47000 nodes  [ array: 7377  framework rtti: 345  func: 3553  group: 1  struct: 48590 ]
+[rtyper] -=- specialized 10 more blocks -=-
+[rtyper] -=- specialized 7 more blocks -=-
+[rtyper] -=- specialized 5 more blocks -=-
+[c]    48000 nodes  [ array: 7485  framework rtti: 348  func: 3655  group: 1  struct: 49333 ]
+[c]    49000 nodes  [ array: 7490  framework rtti: 348  func: 3736  group: 1  struct: 50235 ]
+[c]    50000 nodes  [ array: 7493  framework rtti: 348  func: 3840  group: 1  struct: 51028 ]
+[c]    51000 nodes  [ array: 7497  framework rtti: 348  func: 3910  group: 1  struct: 51699 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    52000 nodes  [ array: 7577  framework rtti: 353  func: 3991  group: 1  struct: 52074 ]
+[rtyper] specializing: 92100 / 92100 blocks   (100%)
+[rtyper] -=- specialized 9 more blocks -=-
+[c]    53000 nodes  [ array: 7615  framework rtti: 357  func: 4208  group: 1  struct: 52620 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    54000 nodes  [ array: 7663  framework rtti: 359  func: 4230  group: 1  struct: 53014 ]
+[c]    55000 nodes  [ array: 7958  framework rtti: 359  func: 4230  group: 1  struct: 53666 ]
+[c]    56000 nodes  [ array: 8037  framework rtti: 359  func: 4230  group: 1  struct: 53917 ]
+[c]    57000 nodes  [ array: 8225  framework rtti: 359  func: 4230  group: 1  struct: 54479 ]
+[c]    58000 nodes  [ array: 8244  framework rtti: 362  func: 4250  group: 1  struct: 54565 ]
+[c]    59000 nodes  [ array: 8279  framework rtti: 377  func: 4331  group: 1  struct: 54802 ]
+[c]    60000 nodes  [ array: 8471  framework rtti: 385  func: 4487  group: 1  struct: 55316 ]
+[rtyper] -=- specialized 10 more blocks -=-
+[c]    61000 nodes  [ array: 8782  framework rtti: 399  func: 4593  group: 1  struct: 55965 ]
+[c]    62000 nodes  [ array: 9048  framework rtti: 399  func: 4698  group: 1  struct: 56450 ]
+[c]    63000 nodes  [ array: 9345  framework rtti: 399  func: 4746  group: 1  struct: 56959 ]
+[c]    64000 nodes  [ array: 9617  framework rtti: 421  func: 4875  group: 1  struct: 57454 ]
+[c]    65000 nodes  [ array: 9910  framework rtti: 451  func: 5013  group: 1  struct: 57741 ]
+[c]    66000 nodes  [ array: 10275  framework rtti: 453  func: 5107  group: 1  struct: 58471 ]
+[c]    67000 nodes  [ array: 10421  framework rtti: 453  func: 5298  group: 1  struct: 59817 ]
+[c]    68000 nodes  [ array: 10596  framework rtti: 472  func: 5621  group: 1  struct: 60648 ]
+[c]    69000 nodes  [ array: 10860  framework rtti: 480  func: 5684  group: 1  struct: 61386 ]
+[c]    70000 nodes  [ array: 10886  framework rtti: 487  func: 5929  group: 1  struct: 61913 ]
+[c]    71000 nodes  [ array: 10958  framework rtti: 493  func: 5990  group: 1  struct: 62487 ]
+[c]    72000 nodes  [ array: 10988  framework rtti: 501  func: 6045  group: 1  struct: 63073 ]
+[c]    73000 nodes  [ array: 11073  framework rtti: 519  func: 6163  group: 1  struct: 63536 ]
+[c]    74000 nodes  [ array: 11373  framework rtti: 520  func: 6187  group: 1  struct: 64719 ]
+[c]    75000 nodes  [ array: 11620  framework rtti: 520  func: 6257  group: 1  struct: 66957 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[sandbox:WARNING] Not Implemented: SomeStatvfsResult()
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 12 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 12 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 5 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 9 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] specializing: 92200 / 92202 blocks   (99%)
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 12 more blocks -=-
+[rtyper] -=- specialized 5 more blocks -=-
+[rtyper] -=- specialized 12 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] specializing: 92300 / 92300 blocks   (100%)
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    76000 nodes  [ array: 11954  framework rtti: 520  func: 6401  group: 1  struct: 67445 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 5 more blocks -=-
+[sandbox:WARNING] Not Implemented: SomeImpossibleValue()
+[rtyper] -=- specialized 3 more blocks -=-
+[sandbox:WARNING] Not Implemented: SomeImpossibleValue()
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 13 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 11 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    77000 nodes  [ array: 12232  framework rtti: 525  func: 6547  group: 1  struct: 68431 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    78000 nodes  [ array: 12341  framework rtti: 536  func: 6654  group: 1  struct: 68855 ]
+[c]    79000 nodes  [ array: 12545  framework rtti: 552  func: 6757  group: 1  struct: 69142 ]
+[c]    80000 nodes  [ array: 12820  framework rtti: 605  func: 6894  group: 1  struct: 69662 ]
+[c]    81000 nodes  [ array: 12959  framework rtti: 631  func: 6965  group: 1  struct: 71137 ]
+[c]    82000 nodes  [ array: 12994  framework rtti: 643  func: 7057  group: 1  struct: 71879 ]
+[c]    83000 nodes  [ array: 13067  framework rtti: 683  func: 7076  group: 1  struct: 72702 ]
+[c]    84000 nodes  [ array: 13083  framework rtti: 699  func: 7077  group: 1  struct: 73836 ]
+[c]    85000 nodes  [ array: 13094  framework rtti: 707  func: 7095  group: 1  struct: 75112 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] specializing: 92400 / 92404 blocks   (99%)
+[rtyper] -=- specialized 9 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[sandbox:WARNING] Not Implemented: SomeStatvfsResult()
+[rtyper] -=- specialized 3 more blocks -=-
+[sandbox:WARNING] Not Implemented: SomeStatvfsResult()
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    86000 nodes  [ array: 13097  framework rtti: 709  func: 7153  group: 1  struct: 75447 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 13 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    87000 nodes  [ array: 13119  framework rtti: 709  func: 7187  group: 1  struct: 76369 ]
+[c]    88000 nodes  [ array: 13199  framework rtti: 723  func: 7330  group: 1  struct: 76583 ]
+[c]    89000 nodes  [ array: 13304  framework rtti: 733  func: 7393  group: 1  struct: 77058 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    90000 nodes  [ array: 13429  framework rtti: 733  func: 7450  group: 1  struct: 77322 ]
+[c]    91000 nodes  [ array: 13508  framework rtti: 738  func: 7466  group: 1  struct: 77391 ]
+[c]    92000 nodes  [ array: 13562  framework rtti: 742  func: 7491  group: 1  struct: 83758 ]
+[c]    93000 nodes  [ array: 13677  framework rtti: 750  func: 7549  group: 1  struct: 84165 ]
+[c]    94000 nodes  [ array: 13809  framework rtti: 756  func: 7709  group: 1  struct: 84558 ]
+[c]    95000 nodes  [ array: 13890  framework rtti: 756  func: 8021  group: 1  struct: 84908 ]
+[sandbox:WARNING] Not Implemented: sandboxing for external function 'clock_gettime'
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    96000 nodes  [ array: 13921  framework rtti: 762  func: 8111  group: 1  struct: 85001 ]
+[sandbox:WARNING] Not Implemented: sandboxing for external function 'clock_getres'
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    97000 nodes  [ array: 14207  framework rtti: 804  func: 8182  group: 1  struct: 85439 ]
+[c]    98000 nodes  [ array: 14361  framework rtti: 815  func: 8262  group: 1  struct: 85974 ]
+[c]    99000 nodes  [ array: 14469  framework rtti: 852  func: 8544  group: 1  struct: 86352 ]
+[c]   100000 nodes  [ array: 14492  framework rtti: 858  func: 8554  group: 1  struct: 86383 ]
+[c]   101000 nodes  [ array: 14492  framework rtti: 858  func: 8554  group: 1  struct: 86383 ]
+[c]   102000 nodes  [ array: 14498  framework rtti: 864  func: 8572  group: 1  struct: 86383 ]
+[c]   103000 nodes  [ array: 14498  framework rtti: 864  func: 8572  group: 1  struct: 86383 ]
+[c]   104000 nodes  [ array: 14499  framework rtti: 864  func: 8572  group: 1  struct: 86383 ]
+[c]   105000 nodes  [ array: 14499  framework rtti: 864  func: 8572  group: 1  struct: 86383 ]
+[c]   106000 nodes  [ array: 14618  framework rtti: 886  func: 8671  group: 1  struct: 86714 ]
+[rtyper] specializing: 92500 / 92501 blocks   (99%)
+[rtyper] -=- specialized 3 more blocks -=-
+[c]   107000 nodes  [ array: 14685  framework rtti: 896  func: 8862  group: 1  struct: 87666 ]
+[c]   108000 nodes  [ array: 14787  framework rtti: 898  func: 9053  group: 1  struct: 88362 ]
+[c]   109000 nodes  [ array: 14837  framework rtti: 902  func: 9089  group: 1  struct: 88448 ]
+[c]   110000 nodes  [ array: 15011  framework rtti: 932  func: 9195  group: 1  struct: 89117 ]
+[c]   111000 nodes  [ array: 15206  framework rtti: 955  func: 9332  group: 1  struct: 89660 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[c]   112000 nodes  [ array: 15400  framework rtti: 963  func: 9440  group: 1  struct: 90259 ]
+[c]   113000 nodes  [ array: 15519  framework rtti: 963  func: 9509  group: 1  struct: 90875 ]
+[c]   114000 nodes  [ array: 15753  framework rtti: 1019  func: 9722  group: 1  struct: 95201 ]
+[c]   115000 nodes  [ array: 15871  framework rtti: 1107  func: 10014  group: 1  struct: 95355 ]
+[c]   116000 nodes  [ array: 15999  framework rtti: 1107  func: 10089  group: 1  struct: 95769 ]
+[c]   117000 nodes  [ array: 16208  framework rtti: 1108  func: 10173  group: 1  struct: 96148 ]
+[c]   118000 nodes  [ array: 16208  framework rtti: 1108  func: 10173  group: 1  struct: 96150 ]
+[c]   119000 nodes  [ array: 16208  framework rtti: 1108  func: 10173  group: 1  struct: 96150 ]
+[c]   120000 nodes  [ array: 16208  framework rtti: 1108  func: 10173  group: 1  struct: 96150 ]
+[c]   121000 nodes  [ array: 16208  framework rtti: 1108  func: 10173  group: 1  struct: 96150 ]
+[c]   122000 nodes  [ array: 16263  framework rtti: 1126  func: 10266  group: 1  struct: 96308 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[c]   123000 nodes  [ array: 16395  framework rtti: 1183  func: 10540  group: 1  struct: 96424 ]
+[c]   124000 nodes  [ array: 16505  framework rtti: 1200  func: 10863  group: 1  struct: 96734 ]
+[c]   125000 nodes  [ array: 16669  framework rtti: 1218  func: 11029  group: 1  struct: 98955 ]
+[c]   126000 nodes  [ array: 16828  framework rtti: 1315  func: 11289  group: 1  struct: 99134 ]
+[c]   127000 nodes  [ array: 16959  framework rtti: 1446  func: 11638  group: 1  struct: 99140 ]
+[c]   128000 nodes  [ array: 17077  framework rtti: 1553  func: 11922  group: 1  struct: 99203 ]
+[c]   129000 nodes  [ array: 17108  framework rtti: 1566  func: 11967  group: 1  struct: 99217 ]
+[c]   130000 nodes  [ array: 17157  framework rtti: 1566  func: 11969  group: 1  struct: 99432 ]
+[rtyper] specializing: 92600 / 94564 blocks   (97%)
+[rtyper] -=- specialized 2054 more blocks -=-
+[rtyper] -=- specialized 0 more blocks -=-
+[backendopt:inlining] phase with threshold factor: 32.4
+[backendopt:inlining] heuristic: rpython.translator.backendopt.inline.inlining_heuristic
+[backendopt:inlining] inlined 4 callsites.
+[backendopt:malloc] starting malloc removal
+[backendopt:malloc] removed 0 simple mallocs in total
+[backendopt:mergeifblocks] starting to merge if blocks
+[c:database] GC transformer: finished helpers
+[c]   131000 nodes  [ array: 17418  framework rtti: 1569  func: 12440  group: 1  struct: 99685 ]
+[c:database] GC transformer: finished tables
+[c]   132000 nodes  [ array: 17914  framework rtti: 1569  func: 12444  group: 1  struct: 101516 ]
+[c]   133000 nodes  [ array: 18663  framework rtti: 1569  func: 12444  group: 1  struct: 101750 ]
+[c]   134000 nodes  [ array: 18663  framework rtti: 1569  func: 12444  group: 1  struct: 101750 ]
+[gctransform:info] assigned 1783 typeids
+[gctransform:info] added 41275 push/pop stack root instructions
+[gctransform:info] inserted 5471 write barrier calls
+[gctransform:info] found 3 static roots
+[c]   134432 nodes  [ array: 18668  framework rtti: 1569  func: 12444  group: 1  struct: 101750 ]
+[c:database] Completed
+[translation:info] database for generating C source was created
+[c44e1] translation-task}
+[translation:info] Generating c source...
+[c44e1] {translation-task
+starting source_c
+[c:writing] structdef.h
+[c:writing] forwarddecl.h
+[c:writing] preimpl.h
+[c:writing] data_pypy_goal_targetpypystandalone.c
+[c:writing] data_pypy_interpreter_argument.c
+[c:writing] data_pypy_interpreter_astcompiler_assemble.c
+[c:writing] data_pypy_interpreter_astcompiler_ast.c
+[c:writing] data_pypy_interpreter_astcompiler_astbuilder.c
+[c:writing] data_pypy_interpreter_astcompiler_asthelpers.c
+[c:writing] data_pypy_interpreter_astcompiler_codegen.c
+[c:writing] data_pypy_interpreter_astcompiler_misc.c
+[c:writing] data_pypy_interpreter_astcompiler_symtable.c
+[c:writing] data_pypy_interpreter_baseobjspace.c
+[c:writing] data_pypy_interpreter_error.c
+[c:writing] data_pypy_interpreter_executioncontext.c
+[c:writing] data_pypy_interpreter_function.c
+[c:writing] data_pypy_interpreter_gateway.c
+[c:writing] data_pypy_interpreter_generator.c
+[c:writing] data_pypy_interpreter_mixedmodule.c
+[c:writing] data_pypy_interpreter_module.c
+[c:writing] data_pypy_interpreter_nestedscope.c
+[c:writing] data_pypy_interpreter_pycode.c
+[c:writing] data_pypy_interpreter_pycompiler.c
+[c:writing] data_pypy_interpreter_pyframe.c
+[c:writing] data_pypy_interpreter_pyopcode.c
+[c:writing] data_pypy_interpreter_pyparser_automata.c
+[c:writing] data_pypy_interpreter_pyparser_future.c
+[c:writing] data_pypy_interpreter_pyparser_parser.c
+[c:writing] data_pypy_interpreter_pyparser_parsestring.c
+[c:writing] data_pypy_interpreter_pyparser_pyparse.c
+[c:writing] data_pypy_interpreter_pyparser_pytokenizer.c
+[c:writing] data_pypy_interpreter_pytraceback.c
+[c:writing] data_pypy_interpreter_streamutil.c
+[c:writing] data_pypy_interpreter_typedef.c
+[c:writing] data_pypy_module___builtin___abstractinst.c
+[c:writing] data_pypy_module___builtin___compiling.c
+[c:writing] data_pypy_module___builtin___functional.c
+[c:writing] data_pypy_module___builtin___interp_classobj.c
+[c:writing] data_pypy_module___builtin___operation.c
+[c:writing] data_pypy_module___pypy___interp_dict.c
+[c:writing] data_pypy_module__codecs_interp_codecs.c
+[c:writing] data_pypy_module__file___init__.c
+[c:writing] data_pypy_module__file_interp_file.c
+[c:writing] data_pypy_module__file_interp_stream.c
+[c:writing] data_pypy_module__io_interp_bufferedio.c
+[c:writing] data_pypy_module__io_interp_bytesio.c
+[c:writing] data_pypy_module__io_interp_fileio.c
+[c:writing] data_pypy_module__io_interp_io.c
+[c:writing] data_pypy_module__io_interp_iobase.c
+[c:writing] data_pypy_module__io_interp_stringio.c
+[c:writing] data_pypy_module__io_interp_textio.c
+[c:writing] data_pypy_module__pickle_support_maker.c
+[c:writing] data_pypy_module__random_interp_random.c
+[c:writing] data_pypy_module__sre_interp_sre.c
+[c:writing] data_pypy_module__warnings_interp_warnings.c
+[c:writing] data_pypy_module__weakref_interp__weakref.c
+[c:writing] data_pypy_module_exceptions_interp_exceptions.c
+[c:writing] data_pypy_module_imp_importing.c
+[c:writing] data_pypy_module_imp_interp_imp.c
+[c:writing] data_pypy_module_itertools_interp_itertools.c
+[c:writing] data_pypy_module_marshal_interp_marshal.c
+[c:writing] data_pypy_module_posix_interp_posix.c
+[c:writing] data_pypy_module_sys___init__.c
+[c:writing] data_pypy_module_sys_currentframes.c
+[c:writing] data_pypy_module_sys_initpath.c
+[c:writing] data_pypy_module_sys_interp_encoding.c
+[c:writing] data_pypy_objspace_descroperation.c
+[c:writing] data_pypy_objspace_std_boolobject.c
+[c:writing] data_pypy_objspace_std_bufferobject.c
+[c:writing] data_pypy_objspace_std_bytearrayobject.c
+[c:writing] data_pypy_objspace_std_bytesobject.c
+[c:writing] data_pypy_objspace_std_complexobject.c
+[c:writing] data_pypy_objspace_std_complextype.c
+[c:writing] data_pypy_objspace_std_dictmultiobject.c
+[c:writing] data_pypy_objspace_std_dictproxyobject.c
+[c:writing] data_pypy_objspace_std_floatobject.c
+[c:writing] data_pypy_objspace_std_floattype.c
+[c:writing] data_pypy_objspace_std_formatting.c
+[c:writing] data_pypy_objspace_std_frame.c
+[c:writing] data_pypy_objspace_std_intobject.c
+[c:writing] data_pypy_objspace_std_iterobject.c
+[c:writing] data_pypy_objspace_std_listobject.c
+[c:writing] data_pypy_objspace_std_longobject.c
+[c:writing] data_pypy_objspace_std_marshal_impl.c
+[c:writing] data_pypy_objspace_std_newformat.c
+[c:writing] data_pypy_objspace_std_objecttype.c
+[c:writing] data_pypy_objspace_std_objspace.c
+[c:writing] data_pypy_objspace_std_setobject.c
+[c:writing] data_pypy_objspace_std_stdtypedef.c
+[c:writing] data_pypy_objspace_std_stringmethods.c
+[c:writing] data_pypy_objspace_std_transparent.c
+[c:writing] data_pypy_objspace_std_tupleobject.c
+[c:writing] data_pypy_objspace_std_typeobject.c
+[c:writing] data_pypy_objspace_std_unicodeobject.c
+[c:writing] data_rpython_flowspace_specialcase.c
+[c:writing] data_rpython_memory_gc_env.c
+[c:writing] data_rpython_memory_gc_generation.c
+[c:writing] data_rpython_memory_gc_semispace.c
+[c:writing] data_rpython_memory_gctransform_framework.c
+[c:writing] data_rpython_memory_gctransform_support.c
+[c:writing] data_rpython_rlib_rbigint.c
+[c:writing] data_rpython_rlib_rcomplex.c
+[c:writing] data_rpython_rlib_rdtoa.c
+[c:writing] data_rpython_rlib_rfloat.c
+[c:writing] data_rpython_rlib_rlocale.c
+[c:writing] data_rpython_rlib_rmarshal.c
+[c:writing] data_rpython_rlib_rsre_rsre_char.c
+[c:writing] data_rpython_rlib_rsre_rsre_core.c
+[c:writing] data_rpython_rlib_rstack.c
+[c:writing] data_rpython_rlib_rstring.c
+[c:writing] data_rpython_rlib_runicode.c
+[c:writing] data_rpython_rlib_rurandom.c
+[c:writing] data_rpython_rlib_streamio.c
+[c:writing] data_rpython_rlib_unicodedata_unicodedb_5_2_0.c
+[c:writing] data_rpython_rtyper_lltypesystem_ll_str.c
+[c:writing] data_rpython_rtyper_lltypesystem_llarena.c
+[c:writing] data_rpython_rtyper_lltypesystem_rclass.c
+[c:writing] data_rpython_rtyper_lltypesystem_rdict.c
+[c:writing] data_rpython_rtyper_lltypesystem_rffi.c
+[c:writing] data_rpython_rtyper_lltypesystem_rlist.c
+[c:writing] data_rpython_rtyper_lltypesystem_rstr.c
+[c:writing] data_rpython_rtyper_module_ll_os_stat.c
+[c:writing] data_rpython_rtyper_rlist.c
+[c:writing] data_rpython_translator_sandbox_rsandbox.c
+[c:writing] nonfuncnodes.c
+[c:writing] nonfuncnodes_1.c
+[c:writing] nonfuncnodes_2.c
+[c:writing] nonfuncnodes_3.c
+[c:writing] nonfuncnodes_4.c
+[c:writing] nonfuncnodes_5.c
+[c:writing] nonfuncnodes_6.c
+[c:writing] nonfuncnodes_7.c
+[c:writing] nonfuncnodes_8.c
+[c:writing] data_pypy_module__io_interp_bufferedio_1.c
+[c:writing] data_rpython_memory_gc_inspector.c
+[c:writing] data_rpython_rlib_rlocale_1.c
+[c:writing] data_rpython_rlib_rmmap.c
+[c:writing] data_rpython_rlib_rsre_rsre_char_1.c
+[c:writing] data_rpython_rlib_rstack_1.c
+[c:writing] data_rpython_rtyper_lltypesystem_llarena_1.c
+[c:writing] data_rpython_rtyper_lltypesystem_module_ll_math.c
+[c:writing] data_rpython_rtyper_lltypesystem_rffi_1.c
+[c:writing] data_rpython_translator_sandbox_rsandbox_1.c
+[c:writing] implement.c
+[c:writing] implement_1.c
+[c:writing] implement_2.c
+[c:writing] pypy_goal_targetpypystandalone.c
+[c:writing] pypy_interpreter_argument.c
+[c:writing] pypy_interpreter_astcompiler_assemble.c
+[c:writing] pypy_interpreter_astcompiler_ast.c
+[c:writing] pypy_interpreter_astcompiler_astbuilder.c
+[c:writing] pypy_interpreter_astcompiler_asthelpers.c
+[c:writing] pypy_interpreter_astcompiler_codegen.c
+[c:writing] pypy_interpreter_astcompiler_misc.c
+[c:writing] pypy_interpreter_astcompiler_optimize.c
+[c:writing] pypy_interpreter_astcompiler_symtable.c
+[c:writing] pypy_interpreter_baseobjspace.c
+[c:writing] pypy_interpreter_error.c
+[c:writing] pypy_interpreter_eval.c
+[c:writing] pypy_interpreter_executioncontext.c
+[c:writing] pypy_interpreter_function.c
+[c:writing] pypy_interpreter_gateway.c
+[c:writing] pypy_interpreter_generator.c
+[c:writing] pypy_interpreter_mixedmodule.c
+[c:writing] pypy_interpreter_module.c
+[c:writing] pypy_interpreter_nestedscope.c
+[c:writing] pypy_interpreter_pycode.c
+[c:writing] pypy_interpreter_pycompiler.c
+[c:writing] pypy_interpreter_pyframe.c
+[c:writing] pypy_interpreter_pyopcode.c
+[c:writing] pypy_interpreter_pyparser_automata.c
+[c:writing] pypy_interpreter_pyparser_error.c
+[c:writing] pypy_interpreter_pyparser_future.c
+[c:writing] pypy_interpreter_pyparser_parser.c
+[c:writing] pypy_interpreter_pyparser_parsestring.c
+[c:writing] pypy_interpreter_pyparser_pyparse.c
+[c:writing] pypy_interpreter_pyparser_pytokenizer.c
+[c:writing] pypy_interpreter_pytraceback.c
+[c:writing] pypy_interpreter_signature.c
+[c:writing] pypy_interpreter_streamutil.c
+[c:writing] pypy_interpreter_typedef.c
+[c:writing] pypy_interpreter_unicodehelper.c
+[c:writing] pypy_module___builtin___abstractinst.c
+[c:writing] pypy_module___builtin___compiling.c
+[c:writing] pypy_module___builtin___descriptor.c
+[c:writing] pypy_module___builtin___functional.c
+[c:writing] pypy_module___builtin___interp_classobj.c
+[c:writing] pypy_module___builtin___interp_inspect.c
+[c:writing] pypy_module___builtin___operation.c
+[c:writing] pypy_module___pypy___bytebuffer.c
+[c:writing] pypy_module___pypy___interp_builders.c
+[c:writing] pypy_module___pypy___interp_debug.c
+[c:writing] pypy_module___pypy___interp_dict.c
+[c:writing] pypy_module___pypy___interp_identitydict.c
+[c:writing] pypy_module___pypy___interp_intop.c
+[c:writing] pypy_module___pypy___interp_magic.c
+[c:writing] pypy_module___pypy___interp_os.c
+[c:writing] pypy_module___pypy___interp_signal.c
+[c:writing] pypy_module___pypy___interp_time.c
+[c:writing] pypy_module__codecs_interp_codecs.c
+[c:writing] pypy_module__file___init__.c
+[c:writing] pypy_module__file_interp_file.c
+[c:writing] pypy_module__file_interp_stream.c
+[c:writing] pypy_module__io_interp_bufferedio.c
+[c:writing] pypy_module__io_interp_bytesio.c
+[c:writing] pypy_module__io_interp_fileio.c
+[c:writing] pypy_module__io_interp_io.c
+[c:writing] pypy_module__io_interp_iobase.c
+[c:writing] pypy_module__io_interp_stringio.c
+[c:writing] pypy_module__io_interp_textio.c
+[c:writing] pypy_module__pickle_support_maker.c
+[c:writing] pypy_module__random_interp_random.c
+[c:writing] pypy_module__sre_interp_sre.c
+[c:writing] pypy_module__warnings_interp_warnings.c
+[c:writing] pypy_module__weakref_interp__weakref.c
+[c:writing] pypy_module_cmath_interp_cmath.c
+[c:writing] pypy_module_exceptions_interp_exceptions.c
+[c:writing] pypy_module_gc_interp_gc.c
+[c:writing] pypy_module_gc_referents.c
+[c:writing] pypy_module_imp_importing.c
+[c:writing] pypy_module_imp_interp_imp.c
+[c:writing] pypy_module_itertools_interp_itertools.c
+[c:writing] pypy_module_marshal_interp_marshal.c
+[c:writing] pypy_module_math_interp_math.c
+[c:writing] pypy_module_operator_interp_operator.c
+[c:writing] pypy_module_parser_pyparser.c
+[c:writing] pypy_module_posix_interp_posix.c
+[c:writing] pypy_module_sys___init__.c
+[c:writing] pypy_module_sys_currentframes.c
+[c:writing] pypy_module_sys_hook.c
+[c:writing] pypy_module_sys_initpath.c
+[c:writing] pypy_module_sys_interp_encoding.c
+[c:writing] pypy_module_sys_vm.c
+[c:writing] pypy_module_token___init__.c
+[c:writing] pypy_objspace_descroperation.c
+[c:writing] pypy_objspace_std_boolobject.c
+[c:writing] pypy_objspace_std_bufferobject.c
+[c:writing] pypy_objspace_std_bytearrayobject.c
+[c:writing] pypy_objspace_std_bytesobject.c
+[c:writing] pypy_objspace_std_callmethod.c
+[c:writing] pypy_objspace_std_complexobject.c
+[c:writing] pypy_objspace_std_complextype.c
+[c:writing] pypy_objspace_std_dictmultiobject.c
+[c:writing] pypy_objspace_std_dictproxyobject.c
+[c:writing] pypy_objspace_std_floatobject.c
+[c:writing] pypy_objspace_std_floattype.c
+[c:writing] pypy_objspace_std_formatting.c
+[c:writing] pypy_objspace_std_frame.c
+[c:writing] pypy_objspace_std_identitydict.c
+[c:writing] pypy_objspace_std_intobject.c
+[c:writing] pypy_objspace_std_iterobject.c
+[c:writing] pypy_objspace_std_kwargsdict.c
+[c:writing] pypy_objspace_std_listobject.c
+[c:writing] pypy_objspace_std_longobject.c
+[c:writing] pypy_objspace_std_marshal_impl.c
+[c:writing] pypy_objspace_std_memoryobject.c
+[c:writing] pypy_objspace_std_model.c
+[c:writing] pypy_objspace_std_newformat.c
+[c:writing] pypy_objspace_std_objecttype.c
+[c:writing] pypy_objspace_std_objspace.c
+[c:writing] pypy_objspace_std_proxyobject.c
+[c:writing] pypy_objspace_std_setobject.c
+[c:writing] pypy_objspace_std_sliceobject.c
+[c:writing] pypy_objspace_std_slicetype.c
+[c:writing] pypy_objspace_std_specialisedtupleobject.c
+[c:writing] pypy_objspace_std_stdtypedef.c
+[c:writing] pypy_objspace_std_stringmethods.c
+[c:writing] pypy_objspace_std_transparent.c
+[c:writing] pypy_objspace_std_tupleobject.c
+[c:writing] pypy_objspace_std_typeobject.c
+[c:writing] pypy_objspace_std_unicodeobject.c
+[c:writing] pypy_objspace_std_util.c
+[c:writing] rpython_flowspace_specialcase.c
+[c:writing] rpython_memory_gc_base.c
+[c:writing] rpython_memory_gc_env.c
+[c:writing] rpython_memory_gc_generation.c
+[c:writing] rpython_memory_gc_inspector.c
+[c:writing] rpython_memory_gc_semispace.c
+[c:writing] rpython_memory_gctransform_framework.c
+[c:writing] rpython_memory_gctransform_shadowstack.c
+[c:writing] rpython_memory_gctransform_support.c
+[c:writing] rpython_memory_gctransform_transform.c
+[c:writing] rpython_memory_gctypelayout.c
+[c:writing] rpython_memory_lldict.c
+[c:writing] rpython_memory_support.c
+[c:writing] rpython_rlib_buffer.c
+[c:writing] rpython_rlib_entrypoint.c
+[c:writing] rpython_rlib_listsort.c
+[c:writing] rpython_rlib_rStringIO.c
+[c:writing] rpython_rlib_rarithmetic.c
+[c:writing] rpython_rlib_rbigint.c
+[c:writing] rpython_rlib_rcomplex.c
+[c:writing] rpython_rlib_rdtoa.c
+[c:writing] rpython_rlib_rfloat.c
+[c:writing] rpython_rlib_rgc.c
+[c:writing] rpython_rlib_rlocale.c
+[c:writing] rpython_rlib_rmarshal.c
+[c:writing] rpython_rlib_rmmap.c
+[c:writing] rpython_rlib_rposix.c
+[c:writing] rpython_rlib_rrandom.c
+[c:writing] rpython_rlib_rshrinklist.c
+[c:writing] rpython_rlib_rsre_rsre_char.c
+[c:writing] rpython_rlib_rsre_rsre_core.c
+[c:writing] rpython_rlib_rstack.c
+[c:writing] rpython_rlib_rstring.c
+[c:writing] rpython_rlib_rstruct_ieee.c
+[c:writing] rpython_rlib_rstruct_unichar.c
+[c:writing] rpython_rlib_runicode.c
+[c:writing] rpython_rlib_rurandom.c
+[c:writing] rpython_rlib_rweaklist.c
+[c:writing] rpython_rlib_streamio.c
+[c:writing] rpython_rlib_unicodedata_unicodedb_5_2_0.c
+[c:writing] rpython_rtyper_exceptiondata.c
+[c:writing] rpython_rtyper_lltypesystem_ll_str.c
+[c:writing] rpython_rtyper_lltypesystem_llarena.c
+[c:writing] rpython_rtyper_lltypesystem_module_ll_math.c
+[c:writing] rpython_rtyper_lltypesystem_rbuilder.c
+[c:writing] rpython_rtyper_lltypesystem_rclass.c
+[c:writing] rpython_rtyper_lltypesystem_rdict.c
+[c:writing] rpython_rtyper_lltypesystem_rffi.c
+[c:writing] rpython_rtyper_lltypesystem_rlist.c
+[c:writing] rpython_rtyper_lltypesystem_rrange.c
+[c:writing] rpython_rtyper_lltypesystem_rstr.c
+[c:writing] rpython_rtyper_module_ll_os.c
+[c:writing] rpython_rtyper_module_ll_os_environ.c
+[c:writing] rpython_rtyper_module_ll_os_stat.c
+[c:writing] rpython_rtyper_module_ll_time.c
+[c:writing] rpython_rtyper_rlist.c
+[c:writing] rpython_rtyper_rrange.c
+[c:writing] rpython_rtyper_rstr.c
+[c:writing] rpython_tool_error.c
+[c:writing] rpython_translator_c_extfunc.c
+[c:writing] rpython_translator_exceptiontransform.c
+[c:writing] rpython_translator_sandbox_rsandbox.c
+[translation:info] written: /tmp/usession-default-2/testing_1/testing_1.c
+[f7a6e] translation-task}
+[translation:info] Compiling c source...
+[f7a6e] {translation-task
+starting compile_c
+[platform:execute] make -j 4 in /tmp/usession-default-2/testing_1
+[platform:WARNING] pypy_module__warnings_interp_warnings.c: In function 'pypy_g_normalize_module':
+[platform:WARNING] pypy_module__warnings_interp_warnings.c:7964:5: warning: assuming signed overflow does not occur when assuming that (X - c) > X is always false [-Wstrict-overflow]
+[platform:WARNING]   if (l_v549897) {
+[platform:WARNING]      ^
+[platform:WARNING] In file included from /pypy-sandbox/src/pypy/rpython/translator/c/src/g_include.h:11:0,
+[platform:WARNING]                  from rpython_rlib_rurandom.c:9:
+[platform:WARNING] rpython_rlib_rurandom.c: In function 'pypy_g_urandom':
+[platform:WARNING] /pypy-sandbox/src/pypy/rpython/translator/c/src/support.h:57:17: warning: the address of 'pypy_g_array_6321' will always evaluate as 'true' [-Waddress]
+[platform:WARNING]       ((RPyCHECK((array) && (index) >= 0), (array))[index])
+[platform:WARNING]                  ^
+[platform:WARNING] /pypy-sandbox/src/pypy/rpython/translator/c/src/support.h:46:35: note: in definition of macro 'RPyCHECK'
+[platform:WARNING]  #  define RPyCHECK(x)           ((x)?(void)0:RPyAbort())
+[platform:WARNING]                                    ^
+[platform:WARNING] rpython_rlib_rurandom.c:44:15: note: in expansion of macro 'RPyBareItem'
+[platform:WARNING]   l_v1001559 = RPyBareItem(pypy_g_array_6321, 0L);
+[platform:WARNING]                ^
+[platform:WARNING] /pypy-sandbox/src/pypy/rpython/translator/c/src/support.h:57:17: warning: the address of 'pypy_g_array_6321' will always evaluate as 'true' [-Waddress]
+[platform:WARNING]       ((RPyCHECK((array) && (index) >= 0), (array))[index])
+[platform:WARNING]                  ^
+[platform:WARNING] /pypy-sandbox/src/pypy/rpython/translator/c/src/support.h:46:35: note: in definition of macro 'RPyCHECK'
+[platform:WARNING]  #  define RPyCHECK(x)           ((x)?(void)0:RPyAbort())
+[platform:WARNING]                                    ^
+[platform:WARNING] rpython_rlib_rurandom.c:63:2: note: in expansion of macro 'RPyBareItem'
+[platform:WARNING]   RPyBareItem(pypy_g_array_6321, 0L) = l_v1001556;
+[platform:WARNING]   ^
+[platform:WARNING] /pypy-sandbox/src/pypy/rpython/translator/c/src/support.h:57:17: warning: the address of 'pypy_g_array_6321' will always evaluate as 'true' [-Waddress]
+[platform:WARNING]       ((RPyCHECK((array) && (index) >= 0), (array))[index])
+[platform:WARNING]                  ^
+[platform:WARNING] /pypy-sandbox/src/pypy/rpython/translator/c/src/support.h:46:35: note: in definition of macro 'RPyCHECK'
+[platform:WARNING]  #  define RPyCHECK(x)           ((x)?(void)0:RPyAbort())
+[platform:WARNING]                                    ^
+[platform:WARNING] rpython_rlib_rurandom.c:83:15: note: in expansion of macro 'RPyBareItem'
+[platform:WARNING]   l_v1001554 = RPyBareItem(pypy_g_array_6321, 0L);
+[platform:WARNING]                ^
+[platform:WARNING] rpython_rtyper_lltypesystem_rffi.c: In function 'pypy_g_frexp__Float_arrayPtr_star_2':
+[platform:WARNING] rpython_rtyper_lltypesystem_rffi.c:2101:2: warning: passing argument 2 of 'frexp' from incompatible pointer type [enabled by default]
+[platform:WARNING]   l_v1028116 = frexp(l_stararg0_156, l_stararg1_81);
+[platform:WARNING]   ^
+[platform:WARNING] In file included from /usr/include/features.h:364:0,
+[platform:WARNING]                  from /usr/include/pthread.h:21,
+[platform:WARNING]                  from /pypy-sandbox/src/pypy/rpython/translator/c/src/threadlocal.h:14,
+[platform:WARNING]                  from /pypy-sandbox/src/pypy/rpython/translator/c/src/stack.h:12,
+[platform:WARNING]                  from common_header.h:40,
+[platform:WARNING]                  from rpython_rtyper_lltypesystem_rffi.c:4:
+[platform:WARNING] /usr/include/bits/mathcalls.h:103:1: note: expected 'int *' but argument is of type 'Signed *'
+[platform:WARNING]  __MATHCALL (frexp,, (_Mdouble_ __x, int *__exponent));
+[platform:WARNING]  ^
+[platform:WARNING] rpython_rtyper_lltypesystem_rffi.c: In function 'pypy_g__PyPy_dg_dtoa__Float_Signed_Signed_arrayPtr_arra':
+[platform:WARNING] rpython_rtyper_lltypesystem_rffi.c:2114:2: warning: passing argument 4 of '_PyPy_dg_dtoa' from incompatible pointer type [enabled by default]
+[platform:WARNING]   l_v1028117 = _PyPy_dg_dtoa(l_stararg0_179, l_stararg1_90, l_stararg2_19, l_stararg3_8, l_stararg4_3, l_stararg5_2);
+[platform:WARNING]   ^
+[platform:WARNING] In file included from common_header.h:41:0,
+[platform:WARNING]                  from rpython_rtyper_lltypesystem_rffi.c:4:
+[platform:WARNING] /pypy-sandbox/src/pypy/rpython/translator/c/src/dtoa.h:4:8: note: expected 'int *' but argument is of type 'Signed *'
+[platform:WARNING]  char * _PyPy_dg_dtoa(double d, int mode, int ndigits,
+[platform:WARNING]         ^
+[platform:WARNING] rpython_rtyper_lltypesystem_rffi.c:2114:2: warning: passing argument 5 of '_PyPy_dg_dtoa' from incompatible pointer type [enabled by default]
+[platform:WARNING]   l_v1028117 = _PyPy_dg_dtoa(l_stararg0_179, l_stararg1_90, l_stararg2_19, l_stararg3_8, l_stararg4_3, l_stararg5_2);
+[platform:WARNING]   ^
+[platform:WARNING] In file included from common_header.h:41:0,
+[platform:WARNING]                  from rpython_rtyper_lltypesystem_rffi.c:4:
+[platform:WARNING] /pypy-sandbox/src/pypy/rpython/translator/c/src/dtoa.h:4:8: note: expected 'int *' but argument is of type 'Signed *'
+[platform:WARNING]  char * _PyPy_dg_dtoa(double d, int mode, int ndigits,
+[platform:WARNING]         ^
+[translation:info] usession directory: /tmp/usession-default-2
+[translation:info] created: /pypy-sandbox/src/pypy/pypy/goal/pypy-c
+[f7a86] translation-task}
+[Timer] Timings:
+[Timer] annotate                       ---  2183.0 s
+[Timer] rtype_lltype                   ---  2560.7 s
+[Timer] backendopt_lltype              ---  1221.6 s
+[Timer] stackcheckinsertion_lltype     ---   483.6 s
+[Timer] database_c                     ---  1505.2 s
+[Timer] source_c                       ---  2104.0 s
+[Timer] compile_c                      ---  1698.8 s
+[Timer] ============================================
+[Timer] Total:                         --- 11756.9 s
