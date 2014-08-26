@@ -227,19 +227,18 @@ def resolve_jumps(filter):
     new_filter = [None] * len(filter)
     for i, (code, jump_true, jump_false, k) in reversed(enumerate(filter)):
         if jump_true is LABEL_JT and jump_false is LABEL_JF:
+            # emit a noop, but record our offset
             jump_true = 0
             jump_false = 0
-            label_dict[k] = i
             k = 0
+            label_dict[k] = i
         elif jump_true is JUMP_JT and jump_false is JUMP_JF:
             jump_true = 0
             jump_false = 0
-            k = label_dict[k] - i + 1
-        # FIXME: assumes 8-bit bytes
-        if sys.byteorder == 'little':
-            new_filter[i] = ffi.new(struct_sock_filter, {'code'       : code,
-                                                         'jump_true'  : jump_true,
-                                                         'jump_false' : jump_false,
-                                                         'k'          : k })
+            k = label_dict[k] - i - 1
+        new_filter[i] = ffi.new(struct_sock_filter, {'code'       : code,
+                                                     'jump_true'  : jump_true,
+                                                     'jump_false' : jump_false,
+                                                     'k'          : k })
     return ffi.new(struct_sock_fprog, {'len'    : len(new_filter),
                                        'filter' : new_filter})
