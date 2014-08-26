@@ -4,11 +4,14 @@ def load_constants():
     import re
 
     constants = ['AUDIT_ARCH_I386', 'AUDIT_ARCH_X86_64', 'AUDIT_ARCH_ARM']
-    for match in chain(re.finditer(r"^\s*#\s*define\s*[^_]([A-Z_]*)\s+(\S+).*$",
+    for match in chain(re.finditer(r"^\s*#\s*define\s+[^_]([A-Z_]*)\s+(\S+).*$",
                                    open("/usr/include/linux/filter.h", "r".read()),
                                    re.MULTILINE),
-                       re.finditer(r"^\s*#\s*define\s*[^_]([A-Z_]*)\s+(\S+).*$",
+                       re.finditer(r"^\s*#\s*define\s+[^_]([A-Z_]*)\s+(\S+).*$",
                                    open("/usr/include/linux/seccomp.h", "r".read()),
+                                   re.MULTILINE),
+                       re.finditer(r"^\s*#\s*define\s+(__NR[A-Z_]+).*$",
+                                   open("/usr/include/seccomp.h", "r".read()),
                                    re.MULTILINE)):
         try:
             int(match.group(2), base=0)
@@ -213,6 +216,11 @@ elif re.match(r'armv[0-9]+.*', arch):
     VALIDATE_ARCH =   LOAD_ARCH_NR \
                     + JEQ(AUDIT_ARCH_ARM, 1) \
                     + DENY
+
+def syscall_by_name(name):
+    if not name.startswith('__NR_'):
+        name = '__NR_'+name
+    return globals()[name]
 
 def resolve_jumps(filter):
     label_dict = {}
