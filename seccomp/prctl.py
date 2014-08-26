@@ -5,7 +5,7 @@ from cffi import FFI
 
 
 _constants = []
-for match in re.finditer("^\s*#\s*define\s*PR_([A-Z_]+)\s.*$",
+for match in re.finditer(r"^\s*#\s*define\s*PR_([A-Z_]+)\s.*$",
                          open("/usr/include/linux/prctl.h", "r").read(),
                          re.MULTILINE):
     _constants.append(match.group(1))
@@ -35,7 +35,7 @@ del _constants
 
 
 _capability_constants = []
-for match in re.finditer("^\s*#\s*define\s*CAP_([A-Z_]+)\s.*$",
+for match in re.finditer(r"^\s*#\s*define\s*CAP_([A-Z_]+)\s.*$",
                          open("/usr/include/linux/capability.h", "r").read(),
                          re.MULTILINE):
     _capability_constants.append(match.group(1))
@@ -64,7 +64,7 @@ sys.modules[__name__+'.capability_constants'] = capability_constants
 
 
 _seccomp_constants = []
-for match in re.finditer("^\s*#\s*define\s*SECCOMP_([A-Z_]+)\s.*$",
+for match in re.finditer(r"^\s*#\s*define\s*SECCOMP_([A-Z_]+)\s.*$",
                          open("/usr/include/linux/seccomp.h", "r").read(),
                          re.MULTILINE):
     _seccomp_constants.append(match.group(1))
