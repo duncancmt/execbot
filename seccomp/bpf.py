@@ -186,9 +186,10 @@ def JLE(jt):
 def JSET(jt):
     return JUMP(BPF_JSET+BPF_X, 0, 0, len(jt)) + jt
 
-# on 64-bit systems with 64-bit accumulators, we can't natively compare a full
-# 64-bit immediate value against the accumulator because immediate values are
-# only 32-bits
+# on 64-bit systems, it is useful to be able to compare 64-bit values with BPF
+# these programs expect the upper 32-bits of the value to be compared in the
+# accumulator and the lower and upper 32-bits of the values to be compared in
+# M[0] and M[1], respectively.
 if calcsize('l') >= 8:
     def hi32(x):
         return x & (1<<32)-1 << 32
