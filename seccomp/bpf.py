@@ -263,9 +263,9 @@ def compile(filter):
             jump_true = label_dict[jump_true] - i - 1
         if isinstance(jump_false, basestring): # labeled target
             jump_false = label_dict[jump_false] - i - 1
-        new_filter[i] = ffi.new('struct sock_filter', {'code' : code,
-                                                       'jt '  : jump_true,
-                                                       'jf'   : jump_false,
-                                                       'k'    : k })
-    return ffi.new('struct sock_fprog', {'len'    : len(new_filter),
-                                         'filter' : new_filter})
+        new_filter[i] = ffi.new('struct sock_filter *', {'code' : code,
+                                                         'jt '  : jump_true,
+                                                         'jf'   : jump_false,
+                                                         'k'    : k })
+    return ffi.new('struct sock_fprog *', {'len'    : len(new_filter),
+                                           'filter' : new_filter})
