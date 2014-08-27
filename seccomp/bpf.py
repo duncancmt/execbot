@@ -121,7 +121,7 @@ def SYSCALL(nr, jt):
         if not nr.startswith('__NR_'):
             nr = '__NR_'+nr
         nr = globals()[name]
-    return BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, nr, 0, 1) + jt
+    return JEQ(nr, jt)
 
 if sys.byteorder == 'little':
     def LO_ARG(idx):
@@ -139,19 +139,19 @@ else:
 if calcsize('l') == 4:
     HI_ARG = None
     def JEQ(value, jt):
-        return BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, value, 0, 1) + jt
+        return BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, value, 0, len(jt)) + jt
     def JNE(value, jt):
-        return BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, value, 1, 0) + jt
+        return BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, value, len(jt), 0) + jt
     def JGT(value, jt):
-        return BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, value, 0, 1) + jt
+        return BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, value, 0, len(jt)) + jt
     def JLT(value, jt):
-        return BPF_JUMP(BPF_JMP+BPF_JGE+BPF_K, value, 1, 0) + jt
+        return BPF_JUMP(BPF_JMP+BPF_JGE+BPF_K, value, len(jt), 0) + jt
     def JGE(value, jt):
-        return BPF_JUMP(BPF_JMP+BPF_JGE+BPF_K, value, 0, 1) + jt
+        return BPF_JUMP(BPF_JMP+BPF_JGE+BPF_K, value, 0, len(jt)) + jt
     def JLE(value, jt):
-        return BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, value, 1, 0) + jt
+        return BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, value, len(jt), 0) + jt
     def JA(value, jt):
-        return BPF_JUMP(BPF_JMP+BPF_JSET+BPF_K, value, 0, 1) + jt
+        return BPF_JUMP(BPF_JMP+BPF_JSET+BPF_K, value, 0, len(jt)) + jt
     def ARG(i):
         return BPF_STMT(BPF_LD+BPF_W+BPF_ABS, LO_ARG(i))
 elif calcsize('l') == 8:
@@ -169,55 +169,55 @@ elif calcsize('l') == 8:
             return ffi.offsetof('struct seccomp_data', 'args') \
                    + ffi.sizeof('uint64_t') * idx
     def JEQ(value, jt):
-        return   BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 0, 5) \
+        return   BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 0, 4+len(jt)) \
                + BPF_STMT(BPF_LD+BPF_MEM, 0) \
-               + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, lo32(value), 0, 2) \
+               + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, lo32(value), 0, 1+len(jt)) \
                + BPF_STMT(BPF_LD+BPF_MEM, 1) \
                + jt \
                + BPF_STMT(BPF_LD+BPF_MEM, 1)
     def JNE(value, jt):
-        return   BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 5, 0) \
+        return   BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 4+len(jt), 0) \
                + BPF_STMT(BPF_LD+BPF_MEM, 0) \
-               + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, lo32(value), 2, 0) \
+               + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, lo32(value), 1+len(jt), 0) \
                + BPF_STMT(BPF_LD+BPF_MEM, 1) \
                + jt \
                + BPF_STMT(BPF_LD+BPF_MEM, 1)
     def JGT(value, jt):
         return   BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, hi32(value), 4, 0) \
-               + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 0, 5) \
+               + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 0, 4+len(jt)) \
                + BPF_STMT(BPF_LD+BPF_MEM, 0) \
-               + BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, lo32(value), 0, 2) \
+               + BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, lo32(value), 0, 1+len(jt)) \
                + BPF_STMT(BPF_LD+BPF_MEM, 1) \
                + jt \
                + BPF_STMT(BPF_LD+BPF_MEM, 1)
     def JLT(value, jt):
         return   BPF_JUMP(BPF_JMP+BPF_JGE+BPF_K, hi32(value), 0, 4) \
-               + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 0, 5) \
+               + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 0, 4+len(jt)) \
                + BPF_STMT(BPF_LD+BPF_MEM, 0) \
-               + BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, lo32(value), 2, 0) \
+               + BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, lo32(value), 1+len(jt), 0) \
                + BPF_STMT(BPF_LD+BPF_MEM, 1) \
                + jt \
                + BPF_STMT(BPF_LD+BPF_MEM, 1)
     def JGE(value, jt):
         return   BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, hi32(value), 4, 0) \
-               + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 0, 5) \
+               + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 0, 4+len(jt)) \
                + BPF_STMT(BPF_LD+BPF_MEM, 0) \
-               + BPF_JUMP(BPF_JMP+BPF_JGE+BPF_K, lo32(value), 0, 2) \
+               + BPF_JUMP(BPF_JMP+BPF_JGE+BPF_K, lo32(value), 0, 1+len(jt)) \
                + BPF_STMT(BPF_LD+BPF_MEM, 1) \
                + jt \
                + BPF_STMT(BPF_LD+BPF_MEM, 1)
     def JLE(value, jt):
-        return   BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, hi32(value), 6, 0) \
+        return   BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, hi32(value), 5+len(jt), 0) \
                + BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 0, 3) \
                + BPF_STMT(BPF_LD+BPF_MEM, 0) \
-               + BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, lo32(value), 2, 0) \
+               + BPF_JUMP(BPF_JMP+BPF_JGT+BPF_K, lo32(value), 1+len(jt), 0) \
                + BPF_STMT(BPF_LD+BPF_MEM, 1) \
                + jt \
                + BPF_STMT(BPF_LD+BPF_MEM, 1)
     def JA(value, jt):
         return   BPF_JUMP(BPF_JMP+BPF_JSET+BPF_K, hi32(value), 3, 0) \
                + BPF_STMT(BPF_LD+BPF_MEM, 0) \
-               + BPF_JUMP(BPF_JMP+BPF_JSET+BPF_K, lo32(value), 0, 2) \
+               + BPF_JUMP(BPF_JMP+BPF_JSET+BPF_K, lo32(value), 0, 1+len(jt)) \
                + BPF_STMT(BPF_LD+BPF_MEM, 1) \
                + jt \
                + BPF_STMT(BPF_LD+BPF_MEM, 1)
