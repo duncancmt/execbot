@@ -19,7 +19,7 @@ md5sums=('SKIP')
 
 build() {
   cd pypy/pypy/goal
-  export CFLAGS="${CFLAGS} -static"
+
   pypy ../../rpython/bin/rpython -O2 --sandbox --gcrootfinder=shadowstack targetpypystandalone
 }
 
