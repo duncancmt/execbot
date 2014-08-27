@@ -125,11 +125,13 @@ def SYSCALL(nr, jt):
 
 if sys.byteorder == 'little':
     def LO_ARG(idx):
-        return ffi.offsetof('struct seccomp_data', 'args[%d]' % idx)
+        return ffi.offsetof('struct seccomp_data', 'args') \
+               + ffi.sizeof('uint64_t') * idx
 elif sys.byteorder == 'big':
-    # FIXME: assumes uint32_t is 4 bytes long
     def LO_ARG(idx):
-        return ffi.offsetof('struct seccomp_data', 'args[%d]' % idx) + 4
+        return ffi.offsetof('struct seccomp_data', 'args') \
+               + ffi.sizeof('uint64_t') * idx \
+               + ffi.sizeof('uint32_t')
 else:
     raise RuntimeError("Unknown endianness")
 
@@ -153,17 +155,19 @@ if calcsize('l') == 4:
     def ARG(i):
         return BPF_STMT(BPF_LD+BPF_W+BPF_ABS, LO_ARG(i))
 elif calcsize('l') == 8:
-    # FIXME: see above notes about length assumptions
     def hi32(x):
         return x & (1<<32)-1 << 32
     def lo32(x):
         return x & (1<<32)-1
     if sys.byteorder == 'little':
         def HI_ARG(idx):
-            return ffi.offsetof('struct seccomp_data', 'args[%d]' % idx) + 4
+            return ffi.offsetof('struct seccomp_data', 'args') \
+                   + ffi.sizeof('uint64_t') * idx \
+                   + ffi.sizeof('uint32_t')
     else:
         def HI_ARG(idx):
-            return ffi.offsetof('struct seccomp_data', 'args[%d]' % idx)
+            return ffi.offsetof('struct seccomp_data', 'args') \
+                   + ffi.sizeof('uint64_t') * idx
     def JEQ(value, jt):
         return   BPF_JUMP(BPF_JMP+BPF_JEQ+BPF_K, hi32(value), 0, 5) \
                + BPF_STMT(BPF_LD+BPF_MEM, 0) \
