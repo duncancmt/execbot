@@ -20,7 +20,13 @@ md5sums=('SKIP')
 build() {
   cd pypy/pypy/goal
 
-  pypy ../../rpython/bin/rpython -O2 --sandbox --gcrootfinder=shadowstack targetpypystandalone
+  pypy ../../rpython/bin/rpython -O2 --sandbox --gcrootfinder=shadowstack \
+    targetpypystandalone \
+      --withmod-_cffi_backend \
+      --withmod-_pycparser \
+      --withmod-time \
+      --withmod-struct \
+      --withmod-_struct
 }
 
 package() {
