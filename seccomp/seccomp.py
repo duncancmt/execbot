@@ -68,7 +68,7 @@ from bpf import *
 ALLOW = RET_IMM(SECCOMP_RET_ALLOW)
 DENY_KILL = RET_IMM(SECCOMP_RET_KILL)
 def DENY_ERROR(errno):
-    return RET_IMM(SECCOMP_RET_ERRNO + errno)
+    return RET_IMM(SECCOMP_RET_ERRNO | (errno & 0xffff))
 
 if sys.byteorder == 'little':
     def LO_ARG(idx):
@@ -110,7 +110,7 @@ def SYSCALL(nr, jt):
     if isinstance(nr, basestring):
         if not nr.startswith('__NR_'):
             nr = '__NR_'+nr
-        nr = globals()[name]
+        nr = globals()[nr]
     return JEQ_IMM(nr, jt)
 
 
