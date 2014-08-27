@@ -1,0 +1,56 @@
+_multibytecodec
+_pypyjson
+_rawffi <-- needed for site, old and dumb
+
+Core:
+_cffi_backend
+_pycparser <-- needed for ffi, no option documented
+time
+_struct <-- not listed
+struct <-- broken because no _struct
+
+
+General:
+unicodedata
+
+
+Situational:
+zlib
+bz2
+crypt
+_hashlib
+zipimport
+pyexpat
+binascii
+array
+
+
+Can't figure out what it's used for:
+_locale
+
+
+Nonsense:
+fcntl
+select
+pypyjit
+mmap
+termios
+_lsprof
+cpyext <-- CPython extensions
+signal
+_socket
+_ssl
+_multiprocessing
+thread
+
+
+Not present in default pypy:
+rctime
+cppyy
+
+
+Not present in CPython:
+micronumpy
+_continuation
+_demo
+_minimal_curses
