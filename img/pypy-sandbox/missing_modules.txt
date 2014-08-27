@@ -4,10 +4,12 @@ _rawffi <-- needed for site, old and dumb
 
 Core:
 _cffi_backend
-_pycparser <-- needed for ffi, no option documented
 time
-_struct <-- not listed
 struct <-- broken because no _struct
+
+These modules brought in by the above:
+_struct <-- not listed
+_pycparser <-- needed for ffi, not listed
 
 
 General:
