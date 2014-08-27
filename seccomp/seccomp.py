@@ -86,7 +86,7 @@ else:
 if calcsize('l') == 4:
     HI_ARG = None
     def ARG(i):
-        return STMT(BPF_LD+BPF_W+BPF_ABS, LO_ARG(i))
+        return LWD_IMM(LO_ARG(i))
 elif calcsize('l') == 8:
     if sys.byteorder == 'little':
         def HI_ARG(idx):
@@ -98,10 +98,10 @@ elif calcsize('l') == 8:
             return ffi.offsetof('struct seccomp_data', 'args') \
                    + ffi.sizeof('uint64_t') * idx
     def ARG(i):
-        return   STMT(BPF_LD+BPF_W+BPF_ABS, LO_ARG(idx)) \
-               + STMT(BPF_ST, 0) \
-               + STMT(BPF_LD+BPF_W+BPF_ABS, HI_ARG(idx)) \
-               + STMT(BPF_ST, 1)
+        return   LDW_IMM(LO_ARG(i)) \
+               + ST(0) \
+               + LDW_IMM(HI_ARG(i)) \
+               + ST(1)
 else:
     raise RuntimeError("Unusable long size", calcsize('l'))
 
@@ -114,8 +114,8 @@ def SYSCALL(nr, jt):
     return JEQ_IMM(nr, jt)
 
 
-LOAD_SYSCALL_NR = STMT(BPF_LD+BPF_W+BPF_ABS, ffi.offsetof('struct seccomp_data', 'nr'))
-LOAD_ARCH_NR = STMT(BPF_LD+BPF_W+BPF_ABS, ffi.offsetof('struct seccomp_data', 'arch'))
+LOAD_SYSCALL_NR = LDW_IMM(ffi.offsetof('struct seccomp_data', 'nr'))
+LOAD_ARCH_NR = LDW_IMM(ffi.offsetof('struct seccomp_data', 'arch'))
 arch = os.uname()[4]
 if arch == 'i386':
     VALIDATE_ARCH =   LOAD_ARCH_NR \
