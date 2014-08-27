@@ -2,6 +2,8 @@ __all__ = []
 
 def load_constants():
     import re
+    global ffi
+    global C
     constants = []
     for match in re.finditer(r"^\s*#\s*define\s+([^_][A-Z_]*)\s+([0-9bXx]+).*$",
                              open("/usr/include/linux/filter.h", "r").read(),
@@ -41,12 +43,16 @@ struct sock_fprog {	/* Required for SO_ATTACH_FILTER. */
 	unsigned short		len;	/* Number of filter blocks */
 	struct sock_filter *filter;
 };
+
+void *malloc(size_t size);
+void free(void *ptr);
 """
     for constant in constants:
         cdef_lines += "#define %s ...\n" % constant
     ffi.cdef(cdef_lines)
     C = ffi.verify("""
 #include <linux/filter.h>
+#include <stdlib.h>
 """)
     for constant in constants:
         globals()[constant] = getattr(C, constant)
@@ -254,8 +260,9 @@ if calcsize('l') >= 8:
 __all__ += ['compile']
 def compile(filter):
     label_dict = {}
-    new_filter = [None] * len(filter)
-    for i, (code, jump_true, jump_false, k) in reversed(enumerate(filter)):
+    c_filter_mem = C.malloc(ffi.sizeof('struct sock_filter')*len(filter))
+    c_filter = ffi.cast('struct sock_filter[%d]' % len(filter), c_filter_mem)
+    for i, (code, jump_true, jump_false, k) in reversed(tuple(enumerate(filter))):
         if isinstance(k, basestring): # label
             # emit a noop, but record our offset
             label_dict[k] = i
@@ -264,9 +271,19 @@ def compile(filter):
             jump_true = label_dict[jump_true] - i - 1
         if isinstance(jump_false, basestring): # labeled target
             jump_false = label_dict[jump_false] - i - 1
-        new_filter[i] = ffi.new('struct sock_filter *', {'code' : code,
-                                                         'jt '  : jump_true,
-                                                         'jf'   : jump_false,
-                                                         'k'    : k })
-    return ffi.new('struct sock_fprog *', {'len'    : len(new_filter),
-                                           'filter' : new_filter})
+        instr = c_filter[i]
+        instr.code = code
+        instr.jt = jump_true
+        instr.jf = jump_false
+        instr.k = k
+
+    retval_mem = C.malloc(ffi.sizeof('struct sock_fprog'))
+    retval = ffi.cast('struct sock_fprog *', retval_mem)
+
+    def destructor(retval):
+        C.free(retval_mem)
+        C.free(c_filter_mem)
+    retval = ffi.gc(retval, destructor)
+    retval.len = len(c_filter)
+    retval.filter = c_filter
+    return retval
