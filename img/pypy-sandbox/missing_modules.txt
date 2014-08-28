@@ -6,10 +6,13 @@ Core:
 _cffi_backend
 time
 struct <-- broken because no _struct
+signal <-- needed for cffi._pycparser, needed for cffi
+binascii <-- needed for pickle, needed for cffi._pycparser, needed for cffi
+mmap <-- innocuous enough with good seccomp filtering
+
 
 These modules brought in by the above:
 _struct <-- not listed
-_pycparser <-- needed for ffi, not listed
 
 
 General:
@@ -23,7 +26,6 @@ crypt
 _hashlib
 zipimport
 pyexpat
-binascii
 array
 
 
@@ -35,11 +37,9 @@ Nonsense:
 fcntl
 select
 pypyjit
-mmap
 termios
 _lsprof
 cpyext <-- CPython extensions
-signal
 _socket
 _ssl
 _multiprocessing

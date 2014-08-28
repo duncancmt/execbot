@@ -24,7 +24,10 @@ build() {
     targetpypystandalone \
       --withmod-_cffi_backend \
       --withmod-time \
-      --withmod-struct
+      --withmod-struct \
+      --withmod-signal \
+      --withmod-binascii \
+      --withmod-mmap
 }
 
 package() {
