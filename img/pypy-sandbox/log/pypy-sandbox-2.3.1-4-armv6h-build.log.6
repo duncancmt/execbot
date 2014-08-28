@@ -1,0 +1,29 @@
+[translation:info] 2.7.6 (3cf384e86ef7, Aug 23 2014, 02:54:27)
+[translation:info] [PyPy 2.4.0-alpha0 with GCC 4.8.2 20131219 (prerelease)]
+[platform:msg] Set platform with 'host' cc=None, using cc='gcc'
+[translation:info] Translating target as defined by targetpypystandalone
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/gcctest.c -o /tmp/usession-default-2/gcctest.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/gcctest.c -o /tmp/usession-default-2/gcctest.o
+[platform:execute] gcc /tmp/usession-default-2/gcctest.o -pthread -lrt -o /tmp/usession-default-2/gcctest
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused -I/pypy-sandbox/src/pypy/rpython/translator/c /tmp/usession-default-2/platcheck_0.c -o /tmp/usession-default-2/platcheck_0.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused -I/pypy-sandbox/src/pypy/rpython/translator/c /pypy-sandbox/src/pypy/rpython/translator/c/src/thread.c -o /tmp/usession-default-2/rpython/translator/c/src/thread.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_0.o /tmp/usession-default-2/rpython/translator/c/src/thread.o -pthread -Wl,--export-dynamic,--version-script=/tmp/usession-default-2/dynamic-symbols-0 -lrt -o /tmp/usession-default-2/platcheck_0
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_1.c -o /tmp/usession-default-2/platcheck_1.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_1.o -pthread -lrt -o /tmp/usession-default-2/platcheck_1
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_2.c -o /tmp/usession-default-2/platcheck_2.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_2.o -pthread -lrt -o /tmp/usession-default-2/platcheck_2
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_3.c -o /tmp/usession-default-2/platcheck_3.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_3.o -pthread -lrt -o /tmp/usession-default-2/platcheck_3
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_4.c -o /tmp/usession-default-2/platcheck_4.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_4.o -pthread -lintl -lrt -o /tmp/usession-default-2/platcheck_4
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_5.c -o /tmp/usession-default-2/platcheck_5.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_5.o -pthread -lrt -o /tmp/usession-default-2/platcheck_5
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_6.c -o /tmp/usession-default-2/platcheck_6.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_6.o -pthread -lrt -o /tmp/usession-default-2/platcheck_6
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_7.c -o /tmp/usession-default-2/platcheck_7.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_7.o -pthread -lrt -o /tmp/usession-default-2/platcheck_7
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-2/platcheck_8.c -o /tmp/usession-default-2/platcheck_8.o
+[platform:execute] gcc /tmp/usession-default-2/platcheck_8.o -pthread -lrt -o /tmp/usession-default-2/platcheck_8
+rpython: error: no such option: --withmod-_struct
+[1m[31m==> ERROR:(B[m[1m A failure occurred in build().(B[m
+[1m    Aborting...(B[m
