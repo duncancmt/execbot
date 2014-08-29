@@ -1,11 +1,11 @@
 import os
+import re
 
 __all__ = ['ALLOW', 'DENY_KILL', 'DENY_ERROR', 'SYSCALL', 'LO_ARG', 'HI_ARG',
            'ARG', 'LOAD_SYSCALL_NR', 'LOAD_ARCH_NR', 'VALIDATE_ARCH',
            'syscall_by_name']
 
 def load_constants():
-    import re
     global ffi
 
     constants = ['AUDIT_ARCH_I386', 'AUDIT_ARCH_X86_64', 'AUDIT_ARCH_ARM']
