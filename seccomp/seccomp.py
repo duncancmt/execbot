@@ -118,14 +118,20 @@ LOAD_SYSCALL_NR = LDW_IMM(ffi.offsetof('struct seccomp_data', 'nr'))
 LOAD_ARCH_NR = LDW_IMM(ffi.offsetof('struct seccomp_data', 'arch'))
 arch = os.uname()[4]
 if arch == 'i386':
-    VALIDATE_ARCH =   LOAD_ARCH_NR \
-                    + JEQ_IMM(AUDIT_ARCH_I386, DENY_KILL)
+    def VALIDATE_ARCH(jt):
+        return   LOAD_ARCH_NR \
+               + JEQ_IMM(AUDIT_ARCH_I386,
+                         jt)
 elif arch == 'x86_64':
-    VALIDATE_ARCH =   LOAD_ARCH_NR \
-                    + JEQ_IMM(AUDIT_ARCH_X86_64, DENY_KILL)
+    def VALIDATE_ARCH(jt):
+        return   LOAD_ARCH_NR \
+               + JEQ_IMM(AUDIT_ARCH_X86_64,
+                         jt)
 elif re.match(r'armv[0-9]+.*', arch):
-    VALIDATE_ARCH =   LOAD_ARCH_NR \
-                    + JEQ_IMM(AUDIT_ARCH_ARM, DENY_KILL)
+    def VALIDATE_ARCH(jt):
+        return   LOAD_ARCH_NR \
+               + JEQ_IMM(AUDIT_ARCH_ARM,
+                         jt)
 
 def syscall_by_name(name):
     if not name.startswith('__NR_'):
