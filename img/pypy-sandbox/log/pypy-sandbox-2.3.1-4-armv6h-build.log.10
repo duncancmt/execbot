@@ -1,0 +1,456 @@
+[translation:info] 2.7.6 (3cf384e86ef7, Aug 23 2014, 02:54:27)
+[translation:info] [PyPy 2.4.0-alpha0 with GCC 4.8.2 20131219 (prerelease)]
+[platform:msg] Set platform with 'host' cc=None, using cc='gcc'
+[translation:info] Translating target as defined by targetpypystandalone
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/gcctest.c -o /tmp/usession-default-6/gcctest.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/gcctest.c -o /tmp/usession-default-6/gcctest.o
+[platform:execute] gcc /tmp/usession-default-6/gcctest.o -pthread -lrt -o /tmp/usession-default-6/gcctest
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused -I/pypy-sandbox/src/pypy/rpython/translator/c /tmp/usession-default-6/platcheck_0.c -o /tmp/usession-default-6/platcheck_0.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused -I/pypy-sandbox/src/pypy/rpython/translator/c /pypy-sandbox/src/pypy/rpython/translator/c/src/thread.c -o /tmp/usession-default-6/rpython/translator/c/src/thread.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_0.o /tmp/usession-default-6/rpython/translator/c/src/thread.o -pthread -Wl,--export-dynamic,--version-script=/tmp/usession-default-6/dynamic-symbols-0 -lrt -o /tmp/usession-default-6/platcheck_0
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_1.c -o /tmp/usession-default-6/platcheck_1.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_1.o -pthread -lrt -o /tmp/usession-default-6/platcheck_1
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_2.c -o /tmp/usession-default-6/platcheck_2.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_2.o -pthread -lrt -o /tmp/usession-default-6/platcheck_2
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_3.c -o /tmp/usession-default-6/platcheck_3.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_3.o -pthread -lrt -o /tmp/usession-default-6/platcheck_3
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_4.c -o /tmp/usession-default-6/platcheck_4.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_4.o -pthread -lintl -lrt -o /tmp/usession-default-6/platcheck_4
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_5.c -o /tmp/usession-default-6/platcheck_5.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_5.o -pthread -lrt -o /tmp/usession-default-6/platcheck_5
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_6.c -o /tmp/usession-default-6/platcheck_6.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_6.o -pthread -lrt -o /tmp/usession-default-6/platcheck_6
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_7.c -o /tmp/usession-default-6/platcheck_7.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_7.o -pthread -lrt -o /tmp/usession-default-6/platcheck_7
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_8.c -o /tmp/usession-default-6/platcheck_8.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_8.o -pthread -lrt -o /tmp/usession-default-6/platcheck_8
+[translation] PyPy config object:
+[translation] [objspace]
+[translation]     lonepycfiles = False
+[translation]     [std]
+[translation]         getattributeshortcut = True
+[translation]         intshortcut = True
+[translation]         optimized_list_getitem = True
+[translation]         withidentitydict = True
+[translation]         withmethodcache = True
+[translation]         withprebuiltchar = True
+[translation]         withrangelist = True
+[translation]         withspecialisedtuple = True
+[translation]         withtypeversion = True
+[translation]     [usemodules]
+[translation]         __pypy__ = True
+[translation]         _ast = True
+[translation]         _cffi_backend = True
+[translation]         _codecs = True
+[translation]         _io = True
+[translation]         _pickle_support = True
+[translation]         _random = True
+[translation]         _rawffi = True
+[translation]         _sre = True
+[translation]         _testing = True
+[translation]         _weakref = True
+[translation]         cmath = True
+[translation]         errno = True
+[translation]         gc = True
+[translation]         imp = True
+[translation]         marshal = True
+[translation]         math = True
+[translation]         mmap = True
+[translation]         operator = True
+[translation]         parser = True
+[translation]         struct = True
+[translation]         symbol = True
+[translation]         time = True
+[translation]         token = True
+[translation]     usepycfiles = False
+Wrote /pypy-sandbox/src/pypy/lib_pypy/ctypes_config_cache/_resource_32_.py.
+Wrote /pypy-sandbox/src/pypy/lib_pypy/ctypes_config_cache/_locale_32_.py.
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_9.c -o /tmp/usession-default-6/platcheck_9.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_9.o -pthread -lrt -o /tmp/usession-default-6/platcheck_9
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_10.c -o /tmp/usession-default-6/platcheck_10.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_11.c -o /tmp/usession-default-6/platcheck_11.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_12.c -o /tmp/usession-default-6/platcheck_12.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_12.o -pthread -lrt -o /tmp/usession-default-6/platcheck_12
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_13.c -o /tmp/usession-default-6/platcheck_13.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_13.o -pthread -lrt -o /tmp/usession-default-6/platcheck_13
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_14.c -o /tmp/usession-default-6/platcheck_14.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_14.o -pthread -lrt -o /tmp/usession-default-6/platcheck_14
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_15.c -o /tmp/usession-default-6/platcheck_15.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_15.o -pthread -lrt -o /tmp/usession-default-6/platcheck_15
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_16.c -o /tmp/usession-default-6/platcheck_16.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_16.o -pthread -lrt -o /tmp/usession-default-6/platcheck_16
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_17.c -o /tmp/usession-default-6/platcheck_17.o
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_18.c -o /tmp/usession-default-6/platcheck_18.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_18.o -pthread -lrt -o /tmp/usession-default-6/platcheck_18
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_19.c -o /tmp/usession-default-6/platcheck_19.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_19.o -pthread -lrt -o /tmp/usession-default-6/platcheck_19
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_20.c -o /tmp/usession-default-6/platcheck_20.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_20.o -pthread -lrt -o /tmp/usession-default-6/platcheck_20
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_21.c -o /tmp/usession-default-6/platcheck_21.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_21.o -pthread -lrt -o /tmp/usession-default-6/platcheck_21
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_22.c -o /tmp/usession-default-6/platcheck_22.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_22.o -pthread -lrt -lrt -o /tmp/usession-default-6/platcheck_22
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_23.c -o /tmp/usession-default-6/platcheck_23.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_23.o -pthread -lrt -lrt -o /tmp/usession-default-6/platcheck_23
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_24.c -o /tmp/usession-default-6/platcheck_24.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_24.o -pthread -lrt -lrt -o /tmp/usession-default-6/platcheck_24
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_26.c -o /tmp/usession-default-6/platcheck_26.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_26.o -pthread -lrt -o /tmp/usession-default-6/platcheck_26
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_27.c -o /tmp/usession-default-6/platcheck_27.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_27.o -pthread -lrt -o /tmp/usession-default-6/platcheck_27
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_28.c -o /tmp/usession-default-6/platcheck_28.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_28.o -pthread -lrt -o /tmp/usession-default-6/platcheck_28
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_29.c -o /tmp/usession-default-6/platcheck_29.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_29.o -pthread -ldl -lrt -o /tmp/usession-default-6/platcheck_29
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_30.c -o /tmp/usession-default-6/platcheck_30.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_30.o -pthread -lrt -o /tmp/usession-default-6/platcheck_30
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused -I/usr/lib/libffi-3.1/include /tmp/usession-default-6/platcheck_31.c -o /tmp/usession-default-6/platcheck_31.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_31.o -pthread -lffi -lrt -o /tmp/usession-default-6/platcheck_31
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_33.c -o /tmp/usession-default-6/platcheck_33.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_33.o -pthread -lrt -o /tmp/usession-default-6/platcheck_33
+[translation] translate.py configuration:
+[translation] [translate]
+[translation]     opt = 2
+[translation]     targetspec = targetpypystandalone
+[translation] translation configuration:
+[translation] [translation]
+[translation]     check_str_without_nul = True
+[translation]     gc = generation
+[translation]     gcrootfinder = shadowstack
+[translation]     gctransformer = framework
+[translation]     list_comprehension_operations = True
+[translation]     rweakref = True
+[translation]     sandbox = True
+[translation]     thread = False
+[translation]     withsmallfuncsets = 5
+[translation:info] Annotating&simplifying...
+[22f7] {translation-task
+starting annotate
+[translation:info] with policy: pypy.tool.ann_override.PyPyAnnotatorPolicy
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_34.c -o /tmp/usession-default-6/platcheck_34.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_34.o -pthread -lrt -o /tmp/usession-default-6/platcheck_34
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_35.c -o /tmp/usession-default-6/platcheck_35.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_35.o -pthread -lrt -o /tmp/usession-default-6/platcheck_35
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_36.c -o /tmp/usession-default-6/platcheck_36.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_36.o -pthread -lrt -o /tmp/usession-default-6/platcheck_36
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_37.c -o /tmp/usession-default-6/platcheck_37.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_37.o -pthread -lrt -o /tmp/usession-default-6/platcheck_37
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/gcctest.c -o /tmp/usession-default-6/gcctest.o
+[platform:execute] gcc /tmp/usession-default-6/gcctest.o -pthread -lrt -o /tmp/usession-default-6/gcctest
+[platform:execute] gcc -c -O3 -pthread -fomit-frame-pointer -Wall -Wno-unused /tmp/usession-default-6/platcheck_39.c -o /tmp/usession-default-6/platcheck_39.o
+[platform:execute] gcc /tmp/usession-default-6/platcheck_39.o -pthread -lrt -o /tmp/usession-default-6/platcheck_39
+[36823] translation-task}
+[translation:info] RTyping...
+[36824] {translation-task
+starting rtype_lltype
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict key
+[rtyper:WARNING] SomePBC(can_be_None=True, const=None, subset_of=None) can be null, but forcing non-null in dict value
+[rtyper:WARNING] SomeString(can_be_None=True) can be null, but forcing non-null in dict key
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict value
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict key
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict value
+[rtyper:WARNING] SomeUnicodeString() can be null, but forcing non-null in dict key
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict value
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict key
+[rtyper:WARNING] SomeInstance(can_be_None=True, classdef=pypy.interpreter.baseobjspace.W_Root) can be null, but forcing non-null in dict value
+[rtyper] specializing: 4500 / 89462 blocks   (5%)
+[rtyper] specializing: 9100 / 90915 blocks   (10%)
+[rtyper] specializing: 13900 / 92322 blocks   (15%)
+[rtyper] specializing: 18700 / 93055 blocks   (20%)
+[rtyper] specializing: 23500 / 93651 blocks   (25%)
+[rtyper] specializing: 28400 / 94420 blocks   (30%)
+[rtyper] specializing: 33300 / 95032 blocks   (35%)
+[rtyper] specializing: 38300 / 95518 blocks   (40%)
+[rtyper] specializing: 43200 / 95940 blocks   (45%)
+[rtyper] specializing: 48200 / 96350 blocks   (50%)
+[rtyper] specializing: 53200 / 96723 blocks   (55%)
+[rtyper] specializing: 58200 / 96909 blocks   (60%)
+[rtyper] specializing: 63400 / 97486 blocks   (65%)
+[rtyper] specializing: 68500 / 97747 blocks   (70%)
+[rtyper] specializing: 73700 / 98160 blocks   (75%)
+[rtyper] specializing: 78800 / 98449 blocks   (80%)
+[rtyper] specializing: 83900 / 98665 blocks   (85%)
+[rtyper] specializing: 85800 / 98846 blocks   (86%)
+[rtyper] specializing: 90000 / 98846 blocks   (91%)
+[rtyper] specializing: 94900 / 98846 blocks   (96%)
+[rtyper] -=- specialized 98856 blocks -=-
+[rtyper] specializing: 98900 / 101204 blocks   (97%)
+[rtyper] specializing: 101300 / 101518 blocks   (99%)
+[rtyper] -=- specialized 2662 more blocks -=-
+[rtyper] -=- specialized 0 more blocks -=-
+[rtyper] -=- specialized 5 more blocks -=-
+[7cd01] translation-task}
+[translation:info] lltype back-end optimisations...
+[7cd01] {translation-task
+starting backendopt_lltype
+[backendopt:inlining] phase with threshold factor: 32.4
+[backendopt:inlining] heuristic: rpython.translator.backendopt.inline.inlining_heuristic
+[backendopt:inlining] inlined 60505 callsites.
+[backendopt:malloc] starting malloc removal
+[backendopt:malloc] removed 5898 simple mallocs in total
+[backendopt:mergeifblocks] starting to merge if blocks
+[backendopt:mergeifblocks:WARNING] unreachable code with value u'\\' in graph (rpython.rlib.runicode:1310)unicode_escape
+[backendopt:mergeifblocks:WARNING] unreachable code with value 0 in graph (pypy.module.mmap.interp_mmap:162)W_MMap.descr_getitem
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:73)write_raw_unsigned_data__r_ulonglong
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.ctypeprim:270)W_CTypePrimitiveUnsigned.convert_to_object
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.ctypeprim:180)W_CTypePrimitiveSigned.convert_to_object
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:81)write_raw_signed_data__r_ulonglong
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:337)pack_list_to_raw_array_bounds
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:46)read_raw_unsigned_data
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:52)read_raw_ulong_data
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:39)read_raw_long_data
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:73)write_raw_unsigned_data__r_uint
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:81)write_raw_signed_data__r_longlong
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:81)write_raw_signed_data__int
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.ctypeenum:40)W_CTypeEnumSigned.extra_repr
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.ctypeenum:65)W_CTypeEnumSigned._get_value
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.ctypeenum:40)W_CTypeEnumSigned.extra_repr
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:356)unpack_list_from_raw_array
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:365)unpack_unsigned_list_from_raw_array
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.ctypeenum:49)W_CTypeEnumSigned.string
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.ctypeenum:49)W_CTypeEnumSigned.string
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.ctypeenum:77)W_CTypeEnumUnsigned._get_value
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.misc:33)read_raw_signed_data
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.ctypestruct:237)W_CField.convert_bitfield_to_object
+[backendopt:mergeifblocks:WARNING] unreachable code with value 4 in graph (pypy.module._cffi_backend.ctypestruct:237)W_CField.convert_bitfield_to_object
+[9a745] translation-task}
+[translation:info] inserting stack checks...
+[9a746] {translation-task
+starting stackcheckinsertion_lltype
+[rtyper] -=- specialized 7 more blocks -=-
+[translation:info] inserted 1723 stack checks.
+[a8407] translation-task}
+[translation:info] Creating database for generating c source...
+[a8408] {translation-task
+starting database_c
+[rtyper] -=- specialized 21 more blocks -=-
+[rtyper:WARNING] prebuilt instance <rpython.memory.gctypelayout.GCData object at 0x336524b0> has no attribute 'root_stack_top'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_ll_typeid_map'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'top_of_space'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'red_zone'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'total_collection_count'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_debug_pending'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'space_size'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'max_space_size'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'objects_with_weakrefs'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_list_rpy'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'nursery_scale'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'objects_with_light_finalizers'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'last_generation_root_objects'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_d_oopty'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_callback2_arg4'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_callback2_arg5'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'largest_young_fixedsize'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_debug_seen'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_callback2_arg2'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_callback2_arg3'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'nursery_size'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'objects_with_id'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'tmpstack'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'fromspace'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'free'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'tospace'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'young_objects_with_weakrefs'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'objects_with_finalizers'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_count_rpy'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'largest_young_var_basesize'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'old_objects_pointing_to_young'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_callback2_arg0'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_d_lgro'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_callback2_arg1'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'id_free_list'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'next_free_id'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'finalizer_lock_count'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'young_objects_with_id'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute '_tracked_dict'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gc.generation.GenerationGC object at 0x336520f0> has no attribute 'run_finalizers'
+[rtyper:WARNING] prebuilt instance <rpython.memory.gctypelayout.GCData object at 0x336524b0> has no attribute 'root_stack_base'
+[rtyper] specializing: 101600 / 102988 blocks   (98%)
+[rtyper] specializing: 103000 / 103035 blocks   (99%)
+[rtyper] -=- specialized 1484 more blocks -=-
+[rtyper] specializing: 103100 / 103155 blocks   (99%)
+[rtyper] -=- specialized 120 more blocks -=-
+[backendopt:inlining] phase with threshold factor: 32.4
+[backendopt:inlining] heuristic: rpython.translator.backendopt.inline.inlining_heuristic
+[backendopt:inlining] inlined 822 callsites.
+[backendopt:malloc] starting malloc removal
+[backendopt:malloc] removed 2 simple mallocs in total
+[backendopt:mergeifblocks] starting to merge if blocks
+[rtyper] -=- specialized 10 more blocks -=-
+[rtyper] specializing: 103200 / 103287 blocks   (99%)
+[rtyper] -=- specialized 128 more blocks -=-
+[rtyper] specializing: 103300 / 103305 blocks   (99%)
+[rtyper] -=- specialized 12 more blocks -=-
+[sandbox:WARNING] Not Implemented: sandboxing for external function 'RPython_StartupCode'
+[rtyper] -=- specialized 7 more blocks -=-
+[sandbox:WARNING] Not Implemented: sandboxing for external function 'pypy_debug_catch_fatal_exception'
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 34 more blocks -=-
+[c]     1000 nodes  [ array: 230  framework rtti: 36  func: 377  group: 1  struct: 1237 ]
+[rtyper] -=- specialized 28 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[c]     2000 nodes  [ array: 437  framework rtti: 49  func: 525  group: 1  struct: 2855 ]
+[c]     3000 nodes  [ array: 601  framework rtti: 54  func: 598  group: 1  struct: 4144 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[c]     4000 nodes  [ array: 838  framework rtti: 64  func: 687  group: 1  struct: 9497 ]
+[c]     5000 nodes  [ array: 1117  framework rtti: 65  func: 760  group: 1  struct: 10407 ]
+[c]     6000 nodes  [ array: 1214  framework rtti: 72  func: 1004  group: 1  struct: 11509 ]
+[c]     7000 nodes  [ array: 1286  framework rtti: 72  func: 1004  group: 1  struct: 13353 ]
+[c]     8000 nodes  [ array: 1286  framework rtti: 72  func: 1004  group: 1  struct: 15297 ]
+[c]     9000 nodes  [ array: 1286  framework rtti: 72  func: 1004  group: 1  struct: 17319 ]
+[c]    10000 nodes  [ array: 1286  framework rtti: 72  func: 1004  group: 1  struct: 19183 ]
+[c]    11000 nodes  [ array: 1468  framework rtti: 91  func: 1198  group: 1  struct: 20647 ]
+[c]    12000 nodes  [ array: 1673  framework rtti: 108  func: 1316  group: 1  struct: 21466 ]
+[c]    13000 nodes  [ array: 1826  framework rtti: 108  func: 1521  group: 1  struct: 22389 ]
+[c]    14000 nodes  [ array: 2077  framework rtti: 124  func: 1660  group: 1  struct: 22959 ]
+[c]    15000 nodes  [ array: 2236  framework rtti: 143  func: 1660  group: 1  struct: 23040 ]
+[c]    16000 nodes  [ array: 2420  framework rtti: 143  func: 1660  group: 1  struct: 23040 ]
+[c]    17000 nodes  [ array: 2594  framework rtti: 143  func: 1660  group: 1  struct: 23040 ]
+[c]    18000 nodes  [ array: 2777  framework rtti: 143  func: 1660  group: 1  struct: 23040 ]
+[c]    19000 nodes  [ array: 2952  framework rtti: 143  func: 1660  group: 1  struct: 23040 ]
+[c]    20000 nodes  [ array: 3126  framework rtti: 143  func: 1660  group: 1  struct: 23040 ]
+[c]    21000 nodes  [ array: 3307  framework rtti: 143  func: 1660  group: 1  struct: 23040 ]
+[c]    22000 nodes  [ array: 3481  framework rtti: 143  func: 1660  group: 1  struct: 23040 ]
+[c]    23000 nodes  [ array: 3761  framework rtti: 174  func: 1874  group: 1  struct: 23658 ]
+[c]    24000 nodes  [ array: 4101  framework rtti: 186  func: 1910  group: 1  struct: 25785 ]
+[c]    25000 nodes  [ array: 4486  framework rtti: 194  func: 2053  group: 1  struct: 27035 ]
+[c]    26000 nodes  [ array: 4667  framework rtti: 199  func: 2152  group: 1  struct: 27921 ]
+[c]    27000 nodes  [ array: 4755  framework rtti: 201  func: 2182  group: 1  struct: 28115 ]
+[c]    28000 nodes  [ array: 4755  framework rtti: 201  func: 2182  group: 1  struct: 28115 ]
+[c]    29000 nodes  [ array: 4858  framework rtti: 207  func: 2252  group: 1  struct: 29210 ]
+[c]    30000 nodes  [ array: 4952  framework rtti: 215  func: 2340  group: 1  struct: 29760 ]
+[c]    31000 nodes  [ array: 5114  framework rtti: 216  func: 2379  group: 1  struct: 30532 ]
+[c]    32000 nodes  [ array: 5416  framework rtti: 216  func: 2384  group: 1  struct: 31296 ]
+[c]    33000 nodes  [ array: 5467  framework rtti: 220  func: 2455  group: 1  struct: 31967 ]
+[c]    34000 nodes  [ array: 5486  framework rtti: 221  func: 2574  group: 1  struct: 32869 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    35000 nodes  [ array: 5547  framework rtti: 234  func: 2671  group: 1  struct: 33499 ]
+[c]    36000 nodes  [ array: 5713  framework rtti: 267  func: 2835  group: 1  struct: 37223 ]
+[c]    37000 nodes  [ array: 6221  framework rtti: 272  func: 2913  group: 1  struct: 39073 ]
+[c]    38000 nodes  [ array: 6377  framework rtti: 274  func: 2960  group: 1  struct: 39905 ]
+[c]    39000 nodes  [ array: 6655  framework rtti: 274  func: 2964  group: 1  struct: 42676 ]
+[c]    40000 nodes  [ array: 6850  framework rtti: 297  func: 3074  group: 1  struct: 43462 ]
+[c]    41000 nodes  [ array: 7108  framework rtti: 314  func: 3227  group: 1  struct: 43946 ]
+[c]    42000 nodes  [ array: 7427  framework rtti: 326  func: 3419  group: 1  struct: 44296 ]
+[c]    43000 nodes  [ array: 7491  framework rtti: 326  func: 3435  group: 1  struct: 45407 ]
+[c]    44000 nodes  [ array: 7491  framework rtti: 326  func: 3435  group: 1  struct: 46899 ]
+[c]    45000 nodes  [ array: 7491  framework rtti: 326  func: 3435  group: 1  struct: 48262 ]
+[c]    46000 nodes  [ array: 7648  framework rtti: 335  func: 3530  group: 1  struct: 50407 ]
+[c]    47000 nodes  [ array: 7663  framework rtti: 336  func: 3533  group: 1  struct: 50586 ]
+[c]    48000 nodes  [ array: 7663  framework rtti: 336  func: 3533  group: 1  struct: 50679 ]
+[c]    49000 nodes  [ array: 7778  framework rtti: 349  func: 3573  group: 1  struct: 51275 ]
+[rtyper] -=- specialized 10 more blocks -=-
+[rtyper] specializing: 103400 / 103406 blocks   (99%)
+[rtyper] -=- specialized 7 more blocks -=-
+[rtyper] -=- specialized 5 more blocks -=-
+[c]    50000 nodes  [ array: 7803  framework rtti: 351  func: 3683  group: 1  struct: 52079 ]
+[c]    51000 nodes  [ array: 7806  framework rtti: 351  func: 3754  group: 1  struct: 52971 ]
+[c]    52000 nodes  [ array: 7809  framework rtti: 351  func: 3843  group: 1  struct: 53992 ]
+[c]    53000 nodes  [ array: 7813  framework rtti: 351  func: 3925  group: 1  struct: 54673 ]
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    54000 nodes  [ array: 7923  framework rtti: 357  func: 4040  group: 1  struct: 55403 ]
+[c]    55000 nodes  [ array: 7945  framework rtti: 360  func: 4116  group: 1  struct: 55827 ]
+[rtyper] -=- specialized 9 more blocks -=-
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    56000 nodes  [ array: 7978  framework rtti: 364  func: 4308  group: 1  struct: 56364 ]
+[c]    57000 nodes  [ array: 8105  framework rtti: 364  func: 4308  group: 1  struct: 56748 ]
+[c]    58000 nodes  [ array: 8381  framework rtti: 364  func: 4308  group: 1  struct: 57346 ]
+[c]    59000 nodes  [ array: 8467  framework rtti: 364  func: 4308  group: 1  struct: 57617 ]
+[c]    60000 nodes  [ array: 8636  framework rtti: 365  func: 4309  group: 1  struct: 58149 ]
+[c]    61000 nodes  [ array: 8641  framework rtti: 367  func: 4328  group: 1  struct: 58205 ]
+[c]    62000 nodes  [ array: 8676  framework rtti: 382  func: 4409  group: 1  struct: 58442 ]
+[c]    63000 nodes  [ array: 8894  framework rtti: 393  func: 4570  group: 1  struct: 59003 ]
+[rtyper] -=- specialized 10 more blocks -=-
+[c]    64000 nodes  [ array: 9222  framework rtti: 394  func: 4652  group: 1  struct: 59519 ]
+[c]    65000 nodes  [ array: 9475  framework rtti: 394  func: 4751  group: 1  struct: 60007 ]
+[c]    66000 nodes  [ array: 9753  framework rtti: 394  func: 4816  group: 1  struct: 60507 ]
+[sandbox:WARNING] Not Implemented: sandboxing for external function 'dlclose'
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    67000 nodes  [ array: 10039  framework rtti: 396  func: 4940  group: 1  struct: 60997 ]
+[c]    68000 nodes  [ array: 10314  framework rtti: 435  func: 5123  group: 1  struct: 61415 ]
+[sandbox:WARNING] Not Implemented: sandboxing for external function 'fclose'
+[rtyper] -=- specialized 3 more blocks -=-
+[c]    69000 nodes  [ array: 10584  framework rtti: 463  func: 5208  group: 1  struct: 61699 ]
+[c]    70000 nodes  [ array: 10808  framework rtti: 463  func: 5370  group: 1  struct: 62956 ]
+[c]    71000 nodes  [ array: 11056  framework rtti: 463  func: 5513  group: 1  struct: 63912 ]
+[c]    72000 nodes  [ array: 11218  framework rtti: 480  func: 5755  group: 1  struct: 64855 ]
+[c]    73000 nodes  [ array: 11476  framework rtti: 491  func: 5911  group: 1  struct: 65583 ]
+[c]    74000 nodes  [ array: 11508  framework rtti: 495  func: 6160  group: 1  struct: 66176 ]
+Traceback (most recent call last):
+  File "app_main.py", line 75, in run_toplevel
+  File "/pypy-sandbox/src/pypy/rpython/tool/runsubprocess.py", line 44, in <module>
+[bb126] translation-task}
+    operation = sys.stdin.readline()
+KeyboardInterrupt
+[Timer] Timings:
+[Timer] annotate                       ---  2154.4 s
+[Timer] rtype_lltype                   ---  5440.5 s
+[Timer] backendopt_lltype              ---  1214.5 s
+[Timer] stackcheckinsertion_lltype     ---   565.5 s
+[Timer] database_c                     ---   771.1 s
+[Timer] ============================================
+[Timer] Total:                         --- 10146.1 s
+[translation:info] Error:
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/goal/translate.py", line 316, in main
+[translation:info]     drv.proceed(goals)
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/driver.py", line 531, in proceed
+[translation:info]     return self._execute(goals, task_skip = self._maybe_skip())
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/tool/taskengine.py", line 114, in _execute
+[translation:info]     res = self._do(goal, taskcallable, *args, **kwds)
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/driver.py", line 276, in _do
+[translation:info]     res = func()
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/driver.py", line 429, in task_database_c
+[translation:info]     database = cbuilder.build_database()
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/c/genc.py", line 177, in build_database
+[translation:info]     db.complete()
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/c/database.py", line 306, in complete
+[translation:info]     add_dependencies(node.enum_dependencies(), node)
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/c/database.py", line 294, in add_dependencies
+[translation:info]     self.get(value, parent and parent._funccodegen_owner)
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/c/database.py", line 226, in get
+[translation:info]     node = self.getcontainernode(container)
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/c/database.py", line 160, in getcontainernode
+[translation:info]     node = nodefactory(self, T, container, **buildkwds)
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/c/node.py", line 807, in __init__
+[translation:info]     self.make_funcgens()
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/c/node.py", line 814, in make_funcgens
+[translation:info]     self.funcgens = select_function_code_generators(self.obj, self.db, self.name)
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/c/node.py", line 925, in select_function_code_generators
+[translation:info]     functionname)]
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/c/funcgen.py", line 48, in __init__
+[translation:info]     self.db.exctransformer.create_exception_handling(self.graph)
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/exceptiontransform.py", line 215, in create_exception_handling
+[translation:info]     cleanup_graph(graph)
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/simplify.py", line 990, in cleanup_graph
+[translation:info]     remove_identical_vars(graph)
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/simplify.py", line 540, in remove_identical_vars
+[translation:info]     if not builder.merge_identical_phi_nodes():    # horizontal removal
+[translation:info]    File "/pypy-sandbox/src/pypy/rpython/translator/backendopt/ssa.py", line 73, in merge_identical_phi_nodes
+[translation:info]     linksvars = [variable_families.find_rep(v) for v in linksvars]
+[translation:ERROR] KeyboardInterrupt
+[translation] start debugger...
+> /pypy-sandbox/src/pypy/rpython/translator/backendopt/ssa.py(73)merge_identical_phi_nodes()
+-> linksvars = [variable_families.find_rep(v) for v in linksvars]
+Traceback (most recent call last):
+  File "app_main.py", line 75, in run_toplevel
+    f(*fargs, **fkwds)
+  File "../../rpython/bin/rpython", line 20, in <module>
+    main()
+  File "/pypy-sandbox/src/pypy/rpython/translator/goal/translate.py", line 323, in main
+    debug(True)
+  File "/pypy-sandbox/src/pypy/rpython/translator/goal/translate.py", line 278, in debug
+    pdb_plus_show.start(tb)
+  File "/pypy-sandbox/src/pypy/rpython/translator/tool/pdbplus.py", line 417, in start
+    fn(*args)
+  File "/pypy-sandbox/src/pypy/rpython/translator/tool/pdbplus.py", line 25, in post_mortem
+    self.interaction(t.tb_frame, t)
+  File "/opt/pypy/lib-python/2.7/pdb.py", line 210, in interaction
+    self.cmdloop()
+  File "/opt/pypy/lib-python/2.7/cmd.py", line 109, in cmdloop
+    self.preloop()
+  File "/pypy-sandbox/src/pypy/rpython/translator/tool/pdbplus.py", line 29, in preloop
+    raise NoTTY("Cannot start the debugger when stdout is captured.")
+NoTTY: Cannot start the debugger when stdout is captured.
+
+[1m[31m==> ERROR:(B[m[1m Aborted by user! Exiting...(B[m
