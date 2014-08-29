@@ -1,6 +1,7 @@
 import re
 import imp
 import sys
+import os
 from cffi import FFI
 
 __all__ = ['prctl']
@@ -30,8 +31,15 @@ C = ffi.verify("""
 """, libraries=[])
 
 
-
-prctl = C.prctl
+def prctl(option, arg2, arg3, arg4, arg5):
+    option = ffi.cast('int', option)
+    arg2 = ffi.cast('unsigned long', arg2)
+    arg3 = ffi.cast('unsigned long', arg3)
+    arg4 = ffi.cast('unsigned long', arg4)
+    arg5 = ffi.cast('unsigned long', arg5)
+    ret = C.prctl(option, arg2, arg3, arg4, arg5)
+    if ret != 0:
+        raise OSError(ffi.errno, os.strerror(ffi.errno))
 
 for _constant in _constants:
     globals()[_constant] = getattr(C, _constant)
