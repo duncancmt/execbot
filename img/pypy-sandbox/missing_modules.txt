@@ -1,14 +1,17 @@
 _multibytecodec
 _pypyjson
-_rawffi <-- needed for site, old and dumb
 
 Core:
 _cffi_backend
+_rawffi <-- needed for site, old and dumb
 time
 struct <-- broken because no _struct
-signal <-- needed for cffi._pycparser, needed for cffi
-binascii <-- needed for pickle, needed for cffi._pycparser, needed for cffi
 mmap <-- innocuous enough with good seccomp filtering
+signal <-- needed for subprocess, needed for cffi._pycparser, needed for cffi
+fcntl <-- needed for subprocess, needed for cffi._pycparser, needed for cffi
+select <-- needed for subprocess, needed for cffi._pycparser, needed for cffi
+binascii <-- needed for pickle, needed for cffi._pycparser, needed for cffi
+
 
 
 These modules brought in by the above:
@@ -34,8 +37,6 @@ _locale
 
 
 Nonsense:
-fcntl
-select
 pypyjit
 termios
 _lsprof
