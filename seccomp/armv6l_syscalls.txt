@@ -4,7 +4,6 @@ access
 acct
 add_key
 adjtimex
-alarm
 arm_fadvise64_64
 arm_sync_file_range
 bdflush
@@ -94,7 +93,6 @@ getresgid
 getresgid32
 getresuid
 getresuid32
-getrlimit
 get_robust_list
 getrusage
 getsid
@@ -118,12 +116,10 @@ ioprio_get
 ioprio_set
 io_setup
 io_submit
-ipc
 kcmp
 kexec_load
 keyctl
 kill
-last_syscall
 lchown
 lchown32
 lgetxattr
@@ -148,7 +144,6 @@ mknod
 mknodat
 mlock
 mlockall
-mmap
 mmap2
 mount
 move_pages
@@ -200,7 +195,6 @@ pwritev
 quotactl
 read
 readahead
-readdir
 readlink
 readlinkat
 readv
@@ -236,7 +230,6 @@ sched_setattr
 sched_setparam
 sched_setscheduler
 sched_yield
-select
 semctl
 semget
 semop
@@ -293,14 +286,12 @@ sigprocmask
 sigreturn
 sigsuspend
 socket
-socketcall
 socketpair
 splice
 stat
 stat64
 statfs
 statfs64
-stime
 swapoff
 swapon
 symlink
@@ -308,14 +299,12 @@ symlinkat
 sync
 sync_file_range2
 syncfs
-syscall
 _sysctl
 sysfs
 sysinfo
 syslog
 tee
 tgkill
-time
 timer_create
 timer_delete
 timerfd_create
@@ -330,7 +319,6 @@ truncate
 truncate64
 ugetrlimit
 umask
-umount
 umount2
 uname
 unlink
@@ -338,7 +326,6 @@ unlinkat
 unshare
 uselib
 ustat
-utime
 utimensat
 utimes
 vfork
