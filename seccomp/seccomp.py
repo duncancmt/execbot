@@ -86,7 +86,7 @@ else:
 if calcsize('l') == 4:
     HI_ARG = None
     def ARG(i):
-        return LWD_IMM(LO_ARG(i))
+        return LDW_IMM(LO_ARG(i))
 elif calcsize('l') == 8:
     if sys.byteorder == 'little':
         def HI_ARG(idx):
