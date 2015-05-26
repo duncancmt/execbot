@@ -61,7 +61,7 @@ class JailedProc(PidProc, VirtualizedSandboxedProc, PipeProc):
                                       exclude=exclude),
                 }),
              'tmp': tmpdirnode,
-             'proc': procdirnode if procdirnode is not None else Dir({}),
+             'proc': self.procdir if self.procdir is not None else Dir({}),
              })
 
 __all__ = ["JailedProc"]
