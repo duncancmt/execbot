@@ -16,11 +16,11 @@ def go_to_jail(chroot_path, jail_uid, jail_gid):
     os.setuid(jail_uid)
 
 class JailedProc(PidProc, VirtualizedSandboxedProc, PipeProc):
-    def __init__(self, sandbox_args, sandbox_executable, tmpdir=None, chroot=None, procdir=None, p_table=None):
+    def __init__(self, sandbox_args, executable, tmpdir=None, chroot=None, procdir=None, p_table=None):
         if '-S' not in sandbox_args:
             sandbox_args = ('-S',) + tuple(sandbox_args)
 
-        sandbox_executable = os.path.abspath(sandbox_executable)
+        self.executable = os.path.abspath(executable)
         self.tmpdir = os.path.abspath(tmpdir) if tmpdir is not None else None
         self.chroot = os.path.abspath(chroot) if chroot is not None else None
         self.procdir = procdir
@@ -28,7 +28,7 @@ class JailedProc(PidProc, VirtualizedSandboxedProc, PipeProc):
         self.virtual_root = self.build_virtual_root()
         self.open_fds = {}
 
-        self.popen = subprocess.Popen(sandbox_args, executable=sandbox_executable,
+        self.popen = subprocess.Popen(sandbox_args, executable=self.executable,
                                       bufsize=-1,
                                       stdin=subprocess.PIPE,
                                       stdout=subprocess.PIPE,
