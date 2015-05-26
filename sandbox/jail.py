@@ -32,7 +32,7 @@ class JailedProc(PidProc, VirtualizedSandboxedProc, PipeProc):
                                       bufsize=-1,
                                       stdin=subprocess.PIPE,
                                       stdout=subprocess.PIPE,
-                                      preexec_fn=go_to_jail
+                                      preexec_fn=go_to_jail,
                                       close_fds=True,
                                       cwd=(self.chroot if self.chroot is not None else '.'),
                                       env={})
