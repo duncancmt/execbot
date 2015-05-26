@@ -5,5 +5,7 @@ if [ -z "$1" ] ; then
     exit 1
 fi
 
+PYPY_SANDBOX=$(which pypy-c-sandbox)
+cp $PYPY_SANDBOX $1/$(dirname $PYPY_SANDBOX)
 mkdir -p $1/usr/lib
-cp $(ldd $(which pypy-c-sandbox) | awk '{print $3}' | grep '^/') $1/usr/lib
+cp $(ldd $PYPY_SANDBOX | awk '{print $3}' | grep '^/') $1/usr/lib
