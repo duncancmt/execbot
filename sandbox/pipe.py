@@ -55,14 +55,14 @@ class PipeProc(BlockingProc):
                 else:
                     if end >= len(buf):
                         size -= len(buf) - start
-                        ret.append([start:])
+                        ret.append(buf[start:])
                         if self.inbuf:
                             self.inpos = 0
                         else:
                             self.inpos = None
                     else:
                         size = 0
-                        ret.append([start:end])
+                        ret.append(buf[start:end])
                         self.inpos = end
             ret = "".join(ret)
             yield ret
