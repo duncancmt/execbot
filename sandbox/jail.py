@@ -1,4 +1,6 @@
 import sys, os, subprocess
+from collections import deque
+
 from pid import PidProc
 from rpython.translator.sandbox.sandlib import VirtualizedSandboxedProc
 from sandbox.pipe import PipeProc
