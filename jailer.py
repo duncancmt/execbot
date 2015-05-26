@@ -8,6 +8,8 @@ MAX_HEAP = 16777216
 TMP_DIR = '/execbot/tmp'
 CHROOT_DIR = '/execbot/chroot'
 JAIL_SIZE = 16
+JAIL_UID = 99
+JAIL_GID = 99
 
 prisoners = {}
 procdir = Dir({})
@@ -44,7 +46,7 @@ def jailed_expression(expr):
     for i in xrange(JAIL_SIZE):
         if i not in prisoners:
             pid = i
-    new = JailedProc(args, exe,
+    new = JailedProc(args, exe, JAIL_UID, JAIL_GID,
                      tmpdir=TMP_DIR, chroot=CHROOT_DIR,
                      procdir=procdir, p_table=prisoners)
     prisoners[pid] = new
