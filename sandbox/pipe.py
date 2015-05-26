@@ -18,7 +18,7 @@ class PipeProc(BlockingProc):
 
     def put(self, s):
         if not self.inbuf:
-            assert self.inpos = None
+            assert self.inpos == None
             self.inpos = 0
         self.inbuf.append(s)
 
