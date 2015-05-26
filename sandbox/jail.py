@@ -46,9 +46,9 @@ class JailedProc(PidProc, VirtualizedSandboxedProc, PipeProc):
                                       bufsize=-1,
                                       stdin=subprocess.PIPE,
                                       stdout=subprocess.PIPE,
-                                      preexec_fn=lambda:go_to_jail(self.chroot, uid, gid),
+                                      preexec_fn=lambda:go_to_jail(chroot, uid, gid),
                                       close_fds=True,
-                                      cwd=(self.chroot if self.chroot is not None else '.'),
+                                      cwd=(chroot if chroot is not None else '.'),
                                       env={})
         self.popenlock = None
         self.currenttimeout = None
