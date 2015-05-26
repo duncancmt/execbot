@@ -19,6 +19,7 @@ prctl(PR_SET_SECCOMP,
           + SYSCALL('write', ALLOW)
           + SYSCALL('exit', ALLOW)
           + SYSCALL('exit_group', ALLOW)
+          + SYSCALL('sigreturn', ALLOW)
           # reasonable additions
           + SYSCALL('brk', ALLOW)
           + SYSCALL('mmap2', # only allow the mappings malloc makes
