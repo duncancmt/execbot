@@ -47,7 +47,7 @@ def jailed_expression(expr):
         if i not in prisoners:
             pid = i
             break
-    new = JailedProc(args, exe, JAIL_UID, JAIL_GID,
+    new = JailedProc(args, exe, JAIL_UID, JAIL_GID, MAX_HEAP,
                      tmppath=TMP_DIR, chroot=CHROOT_DIR,
                      procdir=procdir, p_table=prisoners)
     prisoners[pid] = new

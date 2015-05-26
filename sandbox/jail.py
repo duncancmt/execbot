@@ -18,10 +18,9 @@ def go_to_jail(chroot_path, jail_uid, jail_gid):
     os.setuid(jail_uid)
 
 class JailedProc(PidProc, VirtualizedSandboxedProc, PipeProc):
-    def __init__(self, sandbox_args, executable, uid, gid,
+    def __init__(self, sandbox_args, executable, heap_size, uid, gid,
                  tmppath=None, chroot=None, procdir=None, p_table=None):
-        if '-S' not in sandbox_args:
-            sandbox_args = ('-S',) + tuple(sandbox_args)
+        sandbox_args = ('-S', '--heapsize', str(heap_size)) + tuple(sandbox_args)
         chroot = os.path.abspath(chroot) if chroot is not None else None
 
         # from PidProc
