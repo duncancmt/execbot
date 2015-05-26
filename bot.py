@@ -28,7 +28,6 @@ class Bot:
         
         self.f = self.s.makefile()
         
-        self.write = lambda x : self.s.send(x.encode('UTF-8') + crlf)
         self.read = self.f.readline
         
         self.nick = nick
@@ -102,6 +101,9 @@ class Bot:
     def handle_getting_kicked(self, kicker, chan, why): # Handle the bot getting kicked
         pass
 
+    def write(self, msg):
+        self.s.send(msg.encode('UTF-8')+crlf)
+
     def process(self):
         """
         This method reads input from the IRC server, figures out what kind of message it is, and calls the appropriate handler method. It also replies to a PING with a PONG, which tells the IRC server that the bot is still alive.
@@ -160,9 +162,3 @@ class Bot:
                 self.chans.remove(where)
             else:
                 self.handle_kick(kickee,kicker,where,why)
-
-class SimpleOpBot(Bot):
-    def handle_pm(self, what, fromwhom):
-        self.say("I am a robot. Beep boop.", fromwhom)
-    def handle_join(self,who,where):
-        self.hop(who,where)
