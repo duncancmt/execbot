@@ -14,8 +14,8 @@ class can_block(object):
             self.cont = self.f(*args, **kwargs)
             return self(CONTINUE)
         else:
-            if len(args) != 1
-                or len(kwargs) != 0
+            if len(args) != 1 \
+                or len(kwargs) != 0 \
                 or args[0] is not CONTINUE:
                 raise ValueError("Cannot supply new arguments while a syscall is pending")
             ret = self.cont.next()
