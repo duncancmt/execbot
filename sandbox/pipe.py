@@ -14,6 +14,7 @@ class PipeProc(BlockingProc):
         self.outsiz = 0
         self.errbuf = []
         self.errsiz = 0
+        super(PipeProc, self).__init__(*args, **kwargs)
 
     def put(self, s):
         if not self.inbuf:
