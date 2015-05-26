@@ -25,9 +25,9 @@ def clean_jail():
         del procdir.entries[str(i)]
 
 
-def jailed_script(source):
+def jailed_script(url):
     try:
-        response = urllib2.urlopen(source)
+        response = urllib2.urlopen(url)
         content = response.read()
     except:
         raise ValueError("Could not download script")
@@ -50,7 +50,7 @@ def jailed_expression(expr):
                      tmpdir=TMP_DIR, chroot=CHROOT_DIR,
                      procdir=procdir, p_table=prisoners)
     prisoners[pid] = new
-    procdir.entries[str(pid)] = Dir({"source":File(source)})
+    procdir.entries[str(pid)] = Dir({"source":File(expr)})
 
     clean_jail()
     
