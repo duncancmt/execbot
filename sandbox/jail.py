@@ -17,19 +17,30 @@ def go_to_jail(chroot_path, jail_uid, jail_gid):
 
 class JailedProc(PidProc, VirtualizedSandboxedProc, PipeProc):
     def __init__(self, sandbox_args, executable, uid, gid,
-                 tmpdir=None, chroot=None, procdir=None, p_table=None):
+                 tmppath=None, chroot=None, procdir=None, p_table=None):
         if '-S' not in sandbox_args:
             sandbox_args = ('-S',) + tuple(sandbox_args)
+        chroot = os.path.abspath(chroot) if chroot is not None else None
 
-        self.executable = os.path.abspath(executable)
-        self.tmpdir = os.path.abspath(tmpdir) if tmpdir is not None else None
-        self.chroot = os.path.abspath(chroot) if chroot is not None else None
-        self.procdir = procdir
+        # from PidProc
         self.p_table = p_table
-        self.virtual_root = self.build_virtual_root()
+
+        # from VirtualizedSandboxedProc, with modifications
+        execpath = os.path.abspath(executable)
+        tmppath = os.path.abspath(tmppath) if tmppath is not None else None
+        self.virtual_root = self.build_virtual_root(tmppath, execpath, procdir)
         self.open_fds = {}
 
-        self.popen = subprocess.Popen(sandbox_args, executable=self.executable,
+        # from PipeProc
+        self.inbuf = deque()
+        self.inpos = None
+        self.outbuf = []
+        self.outsiz = 0
+        self.errbuf = []
+        self.errsiz = 0
+
+        # from SandboxedProc, with modifications
+        self.popen = subprocess.Popen(sandbox_args, executable=execpath,
                                       bufsize=-1,
                                       stdin=subprocess.PIPE,
                                       stdout=subprocess.PIPE,
@@ -41,12 +52,13 @@ class JailedProc(PidProc, VirtualizedSandboxedProc, PipeProc):
         self.currenttimeout = None
         self.currentlyidlefrom = None
 
-    def build_virtual_root(self):
+    @staticmethod
+    def build_virtual_root(tmppath, execpath, procdir):
         exclude = ['.pyc', '.pyo']
-        if self.tmpdir is None:
+        if tmppath is None:
             tmpdirnode = Dir({})
         else:
-            tmpdirnode = RealDir(self.tmpdir, exclude=exclude)
+            tmpdirnode = RealDir(tmppath, exclude=exclude)
         libroot = str(LIB_ROOT)
 
         return Dir({
@@ -55,14 +67,14 @@ class JailedProc(PidProc, VirtualizedSandboxedProc, PipeProc):
                                    exclude=exclude)
                 }),
             'bin': Dir({
-                'pypy-c': RealFile(self.executable),
+                'pypy-c': RealFile(execpath),
                 'lib-python': RealDir(os.path.join(libroot, 'lib-python'),
                                       exclude=exclude),
                 'lib_pypy': RealDir(os.path.join(libroot, 'lib_pypy'),
                                       exclude=exclude),
                 }),
              'tmp': tmpdirnode,
-             'proc': self.procdir if self.procdir is not None else Dir({}),
+             'proc': procdir if procdir is not None else Dir({}),
              })
 
 __all__ = ["JailedProc"]

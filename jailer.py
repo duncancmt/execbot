@@ -47,7 +47,7 @@ def jailed_expression(expr):
         if i not in prisoners:
             pid = i
     new = JailedProc(args, exe, JAIL_UID, JAIL_GID,
-                     tmpdir=TMP_DIR, chroot=CHROOT_DIR,
+                     tmppath=TMP_DIR, chroot=CHROOT_DIR,
                      procdir=procdir, p_table=prisoners)
     prisoners[pid] = new
     procdir.entries[str(pid)] = Dir({"source":File(expr)})
