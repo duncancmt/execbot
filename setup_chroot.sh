@@ -5,4 +5,5 @@ if [ -z "$1" ] ; then
     exit 1
 fi
 
-cp $(ldd $(which pypy-c-sandbox) | awk '{print $3}' | grep '^/') $1
+mkdir -p $1/usr/lib
+cp $(ldd $(which pypy-c-sandbox) | awk '{print $3}' | grep '^/') $1/usr/lib
